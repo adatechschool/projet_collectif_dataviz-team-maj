@@ -7,7 +7,7 @@ console.log(arrPoke.length);
 let myAstro;
 let myPoke;
 
-async function getValue(){
+function getValue(){
     // let dayBirth = document.getElementById("dayBirth").value;
     // let monthBirth = document.getElementById("monthBirth").value;
     // console.log(dayBirth, monthBirth);
@@ -22,10 +22,20 @@ async function getValue(){
     console.log(myDay);
 
     myAstro = getAstro(myDay, myMonth);
-    console.log(`Tu es ${myAstro} !`);
+    // console.log(`Tu es ${myAstro} !`);
 
     myPoke = arrPoke[arrAstro.indexOf(myAstro)];
-    console.log(`Ton Poké-Astro est ${myPoke} :)`);
+    // console.log(`Ton Poké-Astro est ${myPoke} :)`);
+
+    printAstro();
+}
+
+async function printAstro(){
+    const myAstroDef = await myAstro;
+    const myPokeDef = await myPoke;
+    console.log(myAstroDef + myPokeDef);
+    document.write(`<h1>Tu es ${myAstroDef} ! Ton Pokémon est donc ${myPokeDef}</h1>`);
+
 }
 
 //retourne un signe astro selon le jour et le mois de naissance
