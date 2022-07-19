@@ -1,7 +1,17 @@
-function getValue(){
+const arrAstro=["Bélier", "Taureau", "Gémeaux", "Cancer", "Lion", "Vierge", "Balance", "Scorpion", "Sagittaire", "Capricone", "Verseau", "Poissons"]
+console.log(arrAstro.length);
+
+const arrPoke=["camerupt", "snorlax", "mrmime", "jigglypuff", "arcanine", "chansey", "ditto", "umbreon", "rapidash", "golem", "slowking", "psyduck"];
+console.log(arrPoke.length);
+
+let myAstro;
+let myPoke;
+
+async function getValue(){
     // let dayBirth = document.getElementById("dayBirth").value;
     // let monthBirth = document.getElementById("monthBirth").value;
     // console.log(dayBirth, monthBirth);
+
     let myBirth = document.getElementById("myBirth").value;
     console.log(myBirth);
 
@@ -11,25 +21,49 @@ function getValue(){
     let myDay = myBirth.split('-')[2];
     console.log(myDay);
 
-    // let myAstro = quelAstro(myDay, MyMonth);
+    myAstro = getAstro(myDay, myMonth);
+    console.log(`Tu es ${myAstro} !`);
 
-    // let myPoke = pokeForAstro(myAstro);
-
+    myPoke = arrPoke[arrAstro.indexOf(myAstro)];
+    console.log(`Ton Poké-Astro est ${myPoke} :)`);
 }
 
-// function quelAstro(d, m){
-
-// };
-
-// function pokeForAstro(astro){
-// let poke;
-//     switch(astro){
-//         case "Bélier":
-//             poke = "Camérupt"
-//             break;
-//         case "Taureau":
-//             ...
-//             break;
-//     }
-//     return poke;
-// } 
+//retourne un signe astro selon le jour et le mois de naissance
+function getAstro(d, m){
+    if((d>20 && m==3) || (d<=19 && m==4)){
+    return arrAstro[0];
+    }
+    else if((d>19 && m==4) || (d<=20 && m==5)){
+    return arrAstro[1];
+    }
+    else if((d>20 && m==5) || (d<=21 && m==6)){
+    return arrAstro[2];
+    }    
+    else if((d>21 && m==6) || (d<=22 && m==7)){
+    return arrAstro[3];
+    } 
+    else if((d>22 && m==7) || (d<=22 && m==8)){
+    return arrAstro[4];
+    }
+    else if((d>21 && m==8) || (d<=22 && m==9)){
+    return arrAstro[5];
+    }
+    else if((d>22 && m==9) || (d<=23 && m==10)){
+    return arrAstro[6];
+    }
+    else if((d>23 && m==10) || (d<=22 && m==11)){
+    return arrAstro[7];
+    }
+    else if((d>22 && m==11) || (d<=21 && m==12)){
+    return arrAstro[8];
+    }
+    else if((d>21 && m==12) || (d<=20 && m==1)){
+    return arrAstro[9];
+    }
+    else if((d>19 && m==1) || (d<=18 && m==2)){
+    return arrAstro[10];
+    }
+    else if((d>18 && m==2) || (d<=20 && m==3)){
+    return arrAstro[11];
+    }
+};
