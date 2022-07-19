@@ -34,8 +34,7 @@ async function printAstro(){
     const myAstroDef = await myAstro;
     const myPokeDef = await myPoke;
     console.log(myAstroDef + myPokeDef);
-    document.write(`<h1>Tu es ${myAstroDef} ! Ton Pokémon est donc ${myPokeDef}</h1>`);
-
+    document.write(`<h1>Tu es ${myAstroDef} ! Ton Pokémon est donc ${myPokeDef.charAt(0).toUpperCase()+myPokeDef.slice(1)}</h1>`);
 }
 
 //retourne un signe astro selon le jour et le mois de naissance
