@@ -1,7 +1,16 @@
 <!DOCTYPE html>
-
 <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css">
+    <!-- <link rel="icon" type="" href=""> /// favicon à rajouter-->
+    <!-- <link> /// font à choisir -->
+    <title>Poké-Astro</title>
+</head>
 
+<<<<<<< HEAD
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,40 +26,93 @@
             <h1>Bienvenue sur PokéAstro</h1>
             <img src="/images/LogoPokeAstroSmall.png" alt="pokémon">
         </header>
+=======
+<body>
+    <header>
+        <h1>Bienvenue sur PokéAstro</h1>
+    </header>
+    <section>
+        <!-- <img src="" alt="">  /// logo à mettre -->
+        <h2>Quelle est ta date de naissance, jeune dresseur.seuse ?</h2>
 
-        <section>
-            <!-- <img src="" alt="">  /// logo à mettre --> 
+        <!-- <label for="myBirth">Quelle est ta date de naissance ?</label>
+        <input type="date" id="myBirth" name="myBirth" min="1950-01-01" max="2022-07-15">
+        <br>
+        <button type="button" onclick="dateReq()">Découvres ton Poké-Astro !</button> -->
+>>>>>>> master
 
-            <h2>Quelle est ta date de naissance jeune dresseur ?</h2>
+        <label for="day">Ton jour de naissance :</label>
+        <select id="day" name="day" value="1">
+            <option selected>1</option>
+            <option selected>2</option>
+            <option selected>3</option>
+            <option selected>4</option>
+            <option selected>5</option>
+            <option selected>6</option>
+            <option selected>7</option>
+            <option selected>8</option>
+            <option selected>9</option>
+            <option selected>10</option>
+            <option selected>11</option>
+            <option selected>12</option>
+            <option selected>13</option>
+            <option selected>14</option>
+            <option selected>15</option>
+            <option selected>16</option>
+            <option selected>17</option>
+            <option selected>18</option>
+            <option selected>19</option>
+            <option selected>20</option>
+            <option selected>21</option>
+            <option selected>22</option>
+            <option selected>23</option>
+            <option selected>24</option>
+            <option selected>25</option>
+            <option selected>26</option>
+            <option selected>27</option>
+            <option selected>28</option>
+            <option selected>29</option>
+            <option selected>30</option>
+            <option selected>31</option>
+            <option selected>--Choisis--</option>
+        </select>
+        <label for="month">Ton mois de naissance :</label>
+        <select id="month" name="month">
+            <option selected>Janvier</option>
+            <option selected>Février</option>
+            <option selected>Mars</option>
+            <option selected>Avril</option>
+            <option selected>Mai</option>
+            <option selected>Juin</option>
+            <option selected>Juillet</option>
+            <option selected>Août</option>
+            <option selected>Septembre</option>
+            <option selected>Octobre</option>
+            <option selected>Novembre</option>
+            <option selected>Décembre</option>
+            <option selected>--Choisis--</option>
+        </select>
+        <br>
+        <button type="button" onclick="dateReq()">Découvres ton Poké-Astro !</button>
 
-            <!-- <label for="dayBirth">Quel est ton jour de naissance ?</label>
-            <input type="texte" id="dayBirth" name="dayBirth">
-            <br>
-            <label for="monthBirth">Quel est ton mois de naissance ?</label>
-            <input type="texte" id="monthBirth" name="monthBirth"> 
+        <h1 id="printAstro"></h1>
+        <h1 id="printPoke"></h1>
 
-            <button type="button" onclick="getValue()">OK</button> -->
+    </section>
 
-            <label for="myBirth">Quelle est ta date de naissance ?</label>
-            <input type="date" id="myBirth" name="myBirth" min="1950-01-01" max="2022-07-15" onchange="getValue()">
-            <br>
-            <button type="button" onclick="window.location.href ='page.html'">Découvres ton Poké-Astro !</button>
-        </section>
+    <section>
 
-        <section>
+    </section>
 
-        </section>
+    <section>
 
-        <section>
+    </section>
 
-        </section>
+    <footer>
+        <p>2022 - Ce service vous est offert par la team MAJ.</p>
+    </footer>
 
-        <footer>
-            <p>2022 - Ce service vous est offert par la team MAJ.</p>
-        </footer>
-        
-        <script src="script.js"></script>
-
-    </body>
+    <script src="script.js"></script>
+</body>
 
 </html>
