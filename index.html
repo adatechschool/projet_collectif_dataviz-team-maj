@@ -10,17 +10,65 @@
     </head>
 
     <body>
-        <!-- <label for="dayBirth">Quel est ton jour de naissance ?</label>
-        <input type="texte" id="dayBirth" name="dayBirth">
-        <br>
-        <label for="monthBirth">Quel est ton mois de naissance ?</label>
-        <input type="texte" id="monthBirth" name="monthBirth"> 
-
-        <button type="button" onclick="getValue()">OK</button> -->
-        <label for="myBirth">Quelle est ta date de naissance ?</label>
+        <!-- <label for="myBirth">Quelle est ta date de naissance ?</label>
         <input type="date" id="myBirth" name="myBirth" min="1950-01-01" max="2022-07-15">
         <br>
+        <button type="button" onclick="dateReq()">Découvres ton Poké-Astro !</button> -->
+
+        <label for="day">Ton jour de naissance :</label>
+            <select id="day" name="day" value="1">
+            <option selected>1</option>
+            <option selected>2</option>
+            <option selected>3</option>
+            <option selected>4</option>
+            <option selected>5</option>
+            <option selected>6</option>
+            <option selected>7</option>
+            <option selected>8</option>
+            <option selected>9</option>
+            <option selected>10</option>
+            <option selected>11</option>
+            <option selected>12</option>
+            <option selected>13</option>
+            <option selected>14</option>
+            <option selected>15</option>
+            <option selected>16</option>
+            <option selected>17</option>
+            <option selected>18</option>
+            <option selected>19</option>
+            <option selected>20</option>
+            <option selected>21</option>
+            <option selected>22</option>
+            <option selected>23</option>
+            <option selected>24</option>
+            <option selected>25</option>
+            <option selected>26</option>
+            <option selected>27</option>
+            <option selected>28</option>
+            <option selected>29</option>
+            <option selected>30</option>
+            <option selected>31</option>
+            <option selected>--Choisis--</option>
+            </select>
+        <label for="month">Ton mois de naissance :</label>
+            <select id="month" name="month">
+                <option selected>Janvier</option>
+                <option selected>Février</option>
+                <option selected>Mars</option>
+                <option selected>Avril</option>
+                <option selected>Mai</option>
+                <option selected>Juin</option>
+                <option selected>Juillet</option>
+                <option selected>Août</option>
+                <option selected>Septembre</option>
+                <option selected>Octobre</option>
+                <option selected>Novembre</option>
+                <option selected>Décembre</option>
+                <option selected>--Choisis--</option>
+            </select>
+        <br>
         <button type="button" onclick="dateReq()">Découvres ton Poké-Astro !</button>
+
         <h1 id="printAstro"></h1>
         <h1 id="printPoke"></h1>
         <script src="script.js"></script>
