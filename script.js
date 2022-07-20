@@ -36,7 +36,7 @@ function getMyAstro(){
 async function getMyPoke(){
     myPoke = await arrPoke[arrAstro.indexOf(myAstro)];
     console.log(myPoke);
-    const pokeOnScreen = `Ton Poké-Astro est ${myPoke} :)`
+    const pokeOnScreen = `Ton PokéAstro est ${myPoke} :)`
     document.getElementById("printPoke").innerHTML = pokeOnScreen;
     console.log(myPoke);
 }
