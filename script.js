@@ -1,31 +1,54 @@
-const arrAstro=["Bélier", "Taureau", "Gémeaux", "Cancer", "Lion", "Vierge", "Balance", "Scorpion", "Sagittaire", "Capricone", "Verseau", "Poissons"]
-console.log(arrAstro.length);
-
+//nos données constantes
+const arrAstro=["Bélier", "Taureau", "Gémeaux", "Cancer", "Lion", "Vierge", "Balance", "Scorpion", "Sagittaire", "Capricone", "Verseau", "Poissons"];
 const arrPoke=["camerupt", "snorlax", "mrmime", "jigglypuff", "arcanine", "chansey", "ditto", "umbreon", "rapidash", "golem", "slowking", "psyduck"];
-console.log(arrPoke.length);
+const arrMonths=["Janvier", "Février", "Mars","Avril","Mai","Juin","Juillet","Août","Septembre","Octobre","Novembre","Décembre"]
 
+//les variables qu'on va manipulé
+let myMonth;
+let myDay;
 let myAstro;
 let myPoke;
 
-async function getValue(){
-    // let dayBirth = document.getElementById("dayBirth").value;
-    // let monthBirth = document.getElementById("monthBirth").value;
-    // console.log(dayBirth, monthBirth);
-
-    let myBirth = document.getElementById("myBirth").value;
-    console.log(myBirth);
-
-    let myMonth = myBirth.split('-')[1];
+//récupérer le mois en chiffres
+let monthChoose = document.getElementById("month");
+monthChoose.onchange = () => {
+    myMonthInLetter = monthChoose.value;
+    myMonth = arrMonths.indexOf(myMonthInLetter)+1;
     console.log(myMonth);
+}
 
-    let myDay = myBirth.split('-')[2];
+//récupérer le jour
+let dayChoose = document.getElementById("day");
+dayChoose.onchange = () => {
+    myDay = dayChoose.value;
     console.log(myDay);
+};
 
+//print l'astro
+function getMyAstro(){
     myAstro = getAstro(myDay, myMonth);
-    console.log(`Tu es ${myAstro} !`);
+    const astroOnScreen = `Tu es ${myAstro} !`
+    document.getElementById("printAstro").innerHTML = astroOnScreen;
+    console.log(myAstro);
+};
 
-    myPoke = arrPoke[arrAstro.indexOf(myAstro)];
-    console.log(`Ton Poké-Astro est ${myPoke} :)`);
+//print le poké
+async function getMyPoke(){
+    myPoke = await arrPoke[arrAstro.indexOf(myAstro)];
+    console.log(myPoke);
+    const pokeOnScreen = `Ton Poké-Astro est ${myPoke} :)`
+    document.getElementById("printPoke").innerHTML = pokeOnScreen;
+    console.log(myPoke);
+}
+
+//vérifie qu'il y a une date, si oui, print l'astro et le poké
+function dateReq(){
+    if((myDay == null) || myMonth == null){
+        alert("Poké pas de ball... Tu dois rentrer une date.")
+    } else {
+        getMyAstro();
+        getMyPoke();
+    }
 }
 
 //retourne un signe astro selon le jour et le mois de naissance
