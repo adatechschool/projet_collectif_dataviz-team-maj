@@ -7,15 +7,33 @@
     <title>Ton Poké-Astro</title>
 </head>
 <body>
+    <img id="pokeSprite" src="" alt=""/>
     <script>
-        printSprites();
-        function printSprites(){
-        let myUrl = "https://pokeapi.co/api/v2/pokemon-species/" + "snorlax" + "/"
+        
+        let myPoke = "snorlax"
+        let myUrl = "https://pokeapi.co/api/v2/pokemon/" + myPoke + "/";
+
+        fetch(myUrl)
+        .then(async response => {
+                const jsonData = await response.json();
+                const spriteUrl = await jsonData.sprites.other.dream_world.front_default;
+                const spriteImg = await spriteUrl;
+                document.getElementById("pokeSprite").src = spriteImg;
+                console.log(spriteUrl);
+        });
+
+        // async function printPokeSprite(){
+        //     const spriteImg = await 
+        // }
+        
+        // printSprites();
+        // function printSprites(){
+        // let myUrl = "https://pokeapi.co/api/v2/pokemon-species/" + "snorlax" + "/"
 
         // fetch("https://pokeapi.co/api/v2/pokemon/clefairy/")
         // .then()
 
-        let p = fetch(myUrl);
+        // let p = fetch(myUrl);
 
         // p.then(function(resultat){
         //     if(resultat.ok){
@@ -29,15 +47,15 @@
         //     };
         // })
 
-        p.then((data) => {
-            data=data.json();
-            console.log(data);
-        });
+        // p.then((data) => {
+        //     data=data.json();
+        //     console.log(data);
+        // });
 
-        p.catch((error) => {
-            console.log(error);
-        });
-        }
+        // p.catch((error) => {
+        //     console.log(error);
+        // });
+        // }
 
     </script>
 </body>
