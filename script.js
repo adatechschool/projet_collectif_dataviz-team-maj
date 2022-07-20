@@ -1,40 +1,54 @@
-const arrAstro=["Bélier", "Taureau", "Gémeaux", "Cancer", "Lion", "Vierge", "Balance", "Scorpion", "Sagittaire", "Capricone", "Verseau", "Poissons"]
-console.log(arrAstro.length);
-
+//nos données constantes
+const arrAstro=["Bélier", "Taureau", "Gémeaux", "Cancer", "Lion", "Vierge", "Balance", "Scorpion", "Sagittaire", "Capricone", "Verseau", "Poissons"];
 const arrPoke=["camerupt", "snorlax", "mrmime", "jigglypuff", "arcanine", "chansey", "ditto", "umbreon", "rapidash", "golem", "slowking", "psyduck"];
-console.log(arrPoke.length);
-
+//les variables qu'on va manipulé
+let myBirth;
 let myAstro;
 let myPoke;
 
-function getValue(){
-    // let dayBirth = document.getElementById("dayBirth").value;
-    // let monthBirth = document.getElementById("monthBirth").value;
-    // console.log(dayBirth, monthBirth);
-
-    let myBirth = document.getElementById("myBirth").value;
+//récupérer la date et un signe astro
+let dateChoose = document.getElementById("myBirth");
+dateChoose.onchange = () => {
+    myBirth = dateChoose.value;
     console.log(myBirth);
 
-    let myMonth = myBirth.split('-')[1];
+    const myMonth = myBirth.split('-')[1];
     console.log(myMonth);
 
-    let myDay = myBirth.split('-')[2];
+    const myDay = myBirth.split('-')[2];
     console.log(myDay);
 
     myAstro = getAstro(myDay, myMonth);
-    // console.log(`Tu es ${myAstro} !`);
+    console.log(myAstro);
+};
 
-    myPoke = arrPoke[arrAstro.indexOf(myAstro)];
-    // console.log(`Ton Poké-Astro est ${myPoke} :)`);
-
-    printAstro();
+//au clic, print l'astro
+async function getMyAstro(){
+    const myMonth = await myBirth.split('-')[1];
+    const myDay = await myBirth.split('-')[2];
+    myAstro = await getAstro(myDay, myMonth);
+    const astroOnScreen = `Tu es ${myAstro} !`
+    document.getElementById("printAstro").innerHTML = astroOnScreen;
+    console.log(myAstro);
 }
 
-async function printAstro(){
-    const myAstroDef = await myAstro;
-    const myPokeDef = await myPoke;
-    console.log(myAstroDef + myPokeDef);
-    document.write(`<h1>Tu es ${myAstroDef} ! Ton Pokémon est donc ${myPokeDef.charAt(0).toUpperCase()+myPokeDef.slice(1)}</h1>`);
+//au clic, print le poké
+async function getMyPoke(){
+    myPoke = await arrPoke[arrAstro.indexOf(myAstro)];
+    const pokeOnScreen = `Ton Poké-Astro est ${myPoke.charAt(0).toUpperCase()+myPoke.slice(1)} :)`
+    document.getElementById("printPoke").innerHTML = pokeOnScreen;
+    console.log(myAstro);
+    console.log(myPoke);
+}
+
+//vérifie qu'il y a une date
+function dateReq(){
+    if(myBirth == null){
+        alert("Poké pas de ball... Tu dois rentrer une date.")
+    } else {
+        getMyAstro();
+        getMyPoke();
+    }
 }
 
 //retourne un signe astro selon le jour et le mois de naissance
