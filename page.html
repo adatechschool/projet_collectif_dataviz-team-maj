@@ -8,18 +8,22 @@
 </head>
 <body>
     <img id="pokeSprite" src="" alt=""/>
+    <h1 id="pokeFrench"></h1>
     <script>
         
-        let myPoke = "snorlax"
+        let myPoke = "psyduck"
         let myUrl = "https://pokeapi.co/api/v2/pokemon/" + myPoke + "/";
 
         fetch(myUrl)
         .then(async response => {
                 const jsonData = await response.json();
-                const spriteUrl = await jsonData.sprites.other.dream_world.front_default;
+                const spriteUrl = await jsonData.sprites.other.home.front_default;
                 const spriteImg = await spriteUrl;
                 document.getElementById("pokeSprite").src = spriteImg;
-                console.log(spriteUrl);
+                console.log(spriteImg);
+        })
+        .catch((error) => {
+		document.write('Poké pas de ball... Ce pokémon n\'existe pas.');
         });
 
         // async function printPokeSprite(){
