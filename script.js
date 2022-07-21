@@ -14,7 +14,7 @@ monthChoose.onchange = () => {
     myMonthInLetter = monthChoose.value;
     myMonth = arrMonths.indexOf(myMonthInLetter)+1;
     console.log(myMonth);
-}
+};
 
 //récupérer le jour
 let dayChoose = document.getElementById("day");
@@ -30,7 +30,7 @@ async function dateReq(){
     } else {
         await buttonClicked()
     }
-}
+};
 
 //fonctions quand on clique sur "Découvres ton PokéAstro"
 async function buttonClicked() {
@@ -45,14 +45,14 @@ async function buttonClicked() {
     console.log(horoscope)
     // getElementById(...).src = pokemon
     // getElementById(...).text = horoscope
-}
+};
 
 //récupérer l'image URL du Sprite
 async function fetchSpritePokemon(pokemon) {
     const response = await fetch('https://pokeapi.co/api/v2/pokemon/'+pokemon+'/');
     const sprite = await response.json();
     return sprite.sprites.other.home.front_default;
-}
+};
 
 //récupérer l'horoscope
 async function fetchHoroscope(astro) {
@@ -60,12 +60,12 @@ async function fetchHoroscope(astro) {
     const response = await fetch('https://aztro.sameerkumar.website/?sign=' + myAstroEng + '&day=today', {method: 'POST'});
     const horoscope = await response.json();
     return horoscope.description
-} 
+}; 
 
 //récupérer le nom du pokémon (en anglais)
 function getPokemonName(astro) {
     return arrPoke[arrAstro.indexOf(astro)];
-}
+};
 
 //retourne un signe astro selon le jour et le mois
 function getSigne(d, m) {
@@ -105,7 +105,8 @@ function getSigne(d, m) {
     else if((d>18 && m==2) || (d<=20 && m==3)){
     return arrAstro[11];
     }
-}
+};
+
 
 //CULTURE G => exemple de promesse et d'async/await :
 // const hello = async () => {
