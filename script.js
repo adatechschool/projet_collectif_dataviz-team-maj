@@ -41,6 +41,8 @@ async function getMyPoke(){
     console.log(myPoke);
 }
 
+
+
 //vérifie qu'il y a une date, si oui, print l'astro et le poké
 function dateReq(){
     if((myDay == null) || myMonth == null){
@@ -90,3 +92,4 @@ function getAstro(d, m){
     return arrAstro[11];
     }
 };
+
