@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ton Poké-Astro</title>
+</head>
+<body>
+    <img id="pokeSprite" src="" alt=""/>
+    <h1 id="pokeFrench"></h1>
+    <script>
+        
+        let myPoke = "psyduck"
+        let myUrl = "https://pokeapi.co/api/v2/pokemon/" + myPoke + "/";
+
+        fetch(myUrl)
+        .then(async response => {
+                const jsonData = await response.json();
+                const spriteUrl = await jsonData.sprites.other.home.front_default;
+                const spriteImg = await spriteUrl;
+                document.getElementById("pokeSprite").src = spriteImg;
+                console.log(spriteImg);
+        })
+        .catch((error) => {
+		document.write('Poké pas de ball... Ce pokémon n\'existe pas.');
+        });
+
+        // async function printPokeSprite(){
+        //     const spriteImg = await 
+        // }
+        
+        // printSprites();
+        // function printSprites(){
+        // let myUrl = "https://pokeapi.co/api/v2/pokemon-species/" + "snorlax" + "/"
+
+        // fetch("https://pokeapi.co/api/v2/pokemon/clefairy/")
+        // .then()
+
+        // let p = fetch(myUrl);
+
+        // p.then(function(resultat){
+        //     if(resultat.ok){
+        //         return resultat.json();
+        //     }
+        // });
+
+        // p.then(function(data){
+        //     if(data.ok){
+        //     console.log(data);
+        //     };
+        // })
+
+        // p.then((data) => {
+        //     data=data.json();
+        //     console.log(data);
+        // });
+
+        // p.catch((error) => {
+        //     console.log(error);
+        // });
+        // }
+
+    </script>
+</body>
+</html>
