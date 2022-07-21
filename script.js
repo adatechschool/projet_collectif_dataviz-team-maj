@@ -1,6 +1,6 @@
 //nos données constantes
 const arrAstro=["Bélier", "Taureau", "Gémeaux", "Cancer", "Lion", "Vierge", "Balance", "Scorpion", "Sagittaire", "Capricone", "Verseau", "Poissons"];
-const arrPoke=["camerupt", "snorlax", "mrmime", "jigglypuff", "arcanine", "chansey", "ditto", "umbreon", "rapidash", "golem", "slowking", "psyduck"];
+const arrPoke=["camerupt", "snorlax", "mr-mime", "jigglypuff", "arcanine", "chansey", "pidgey", "umbreon", "rapidash", "golem", "slowking", "psyduck"];
 const arrMonths=["Janvier", "Février", "Mars","Avril","Mai","Juin","Juillet","Août","Septembre","Octobre","Novembre","Décembre"]
 
 //les variables qu'on va manipulé
