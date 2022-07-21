@@ -38,13 +38,22 @@ async function buttonClicked() {
     const jour = myDay
     let signe = getSigne(jour, mois)
     console.log(signe)
-    let pokemon = await fetchSpritePokemon(getPokemonName(signe))
+    let pokemon = getPokemonName(signe)
+    let sprite = await fetchSpritePokemon(pokemon)
+    let nomPokemon = await fetchNamePokemon(pokemon)
     let horoscope = await fetchHoroscope(signe)
 
+    console.log(sprite)
     console.log(pokemon)
     console.log(horoscope)
-    // getElementById(...).src = pokemon
-    // getElementById(...).text = horoscope
+    console.log(nomPokemon)
+
+    document.getElementById("signe").innerHTML = signe
+    document.getElementById("pokemonEng").innerHTML = pokemon
+    document.getElementById("pokemonFr").innerHTML = nomPokemon
+    document.getElementById("sprite").src = sprite
+    document.getElementById("horoscope").innerHTML = horoscope
+
 };
 
 //récupérer l'image URL du Sprite
@@ -52,6 +61,20 @@ async function fetchSpritePokemon(pokemon) {
     const response = await fetch('https://pokeapi.co/api/v2/pokemon/'+pokemon+'/');
     const sprite = await response.json();
     return sprite.sprites.other.home.front_default;
+};
+
+// async function fetchNamePokemon(pokemon){
+//     const response = await fetch('https://pokeapi.co/api/v2/pokemon-species/'+pokemon+'/');
+//     const name = await response.json();
+//     const frenchName = json.names[4].name;
+//     console.log(frenchName);
+//     return frenchName;
+// };
+
+async function fetchNamePokemon(name){
+    const result = await fetch('https://pokeapi.co/api/v2/pokemon-species/'+name+'/');
+    const nom = await result.json();
+    return nom.names[4].name;
 };
 
 //récupérer l'horoscope

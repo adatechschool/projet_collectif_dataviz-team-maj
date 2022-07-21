@@ -10,9 +10,29 @@
     <img id="pokeSprite" src="" alt=""/>
     <h1 id="pokeFrench"></h1>
     <script>
-        
-        let myPoke = "snorlax"
-        let myUrl = "https://pokeapi.co/api/v2/pokemon/" + myPoke + "/";
+
+    // let myurl = 'https://pokeapi.co/api/v2/pokemon-species/snorlax/'
+    
+    // function fetchNamePokemon(url){
+    // const response = await fetch(url);
+    // const name = await response.json();
+    // console.log(name)
+    // // return frenchName.sprites.other.home.front_default;
+    // };
+    // fetchNamePokemon(myurl)
+
+        const myUrl = 'https://pokeapi.co/api/v2/pokemon-species/clefairy/'
+        fetch(myUrl)
+        .then(resp => resp.json())
+        .then(json => {
+            const frenchName = json.names[4].name;
+            console.log(frenchName);
+        });
+
+
+
+        // let myPoke = "snorlax"
+        // let myUrl = "https://pokeapi.co/api/v2/pokemon/" + myPoke + "/";
 
         // fetch(myUrl)
         // .then(async response => {
@@ -26,27 +46,27 @@
 		// document.write('Poké pas de ball... Ce pokémon n\'existe pas.');
         // });
 
-        fetch(myUrl)
-        .then(resp => resp.json())
-        .then(json => {
-            const spriteUrl = json.sprites.other.home.front_default;
-            const spriteImg = spriteUrl;
-            document.getElementById("pokeSprite").src = spriteImg;
-            console.log(spriteImg);
-        })
-        .catch((error) => {
-		document.write('Poké pas de ball... Ce pokémon n\'existe pas.');
-        });
+        // fetch(myUrl)
+        // .then(resp => resp.json())
+        // .then(json => {
+        //     const spriteUrl = json.sprites.other.home.front_default;
+        //     const spriteImg = spriteUrl;
+        //     document.getElementById("pokeSprite").src = spriteImg;
+        //     console.log(spriteImg);
+        // })
+        // .catch((error) => {
+		// document.write('Poké pas de ball... Ce pokémon n\'existe pas.');
+        // });
 
 
-        // const myUrlAstro = 'https://aztro.sameerkumar.website/?sign=aries&day=today';
-        const myUrlAstro = 'https://aztro.sameerkumar.website/?sign=' + myAstroEng + '&day=today'
-        fetch(myUrlAstro, {method: 'POST'})
-        .then(resp => resp.json())
-        .then(json => {
-            const horoscope = json.description;
-            console.log(horoscope);
-        });
+        // // const myUrlAstro = 'https://aztro.sameerkumar.website/?sign=aries&day=today';
+        // const myUrlAstro = 'https://aztro.sameerkumar.website/?sign=' + myAstroEng + '&day=today'
+        // fetch(myUrlAstro, {method: 'POST'})
+        // .then(resp => resp.json())
+        // .then(json => {
+        //     const horoscope = json.description;
+        //     console.log(horoscope);
+        // });
 
         // async function printPokeSprite(){
         //     const spriteImg = await 
