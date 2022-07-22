@@ -18,13 +18,15 @@
         </header>
 
         <section>
-        <h2>Quelle est ta date de naissance, jeune dresseur&middoteuse ?</h2>
+        <div class="titre">
+        <h1>Quelle est ta date de naissance, jeune dresseur&middoteuse ?</h1>
+        </div>
 
         <!-- <label for="myBirth">Quelle est ta date de naissance ?</label>
         <input type="date" id="myBirth" name="myBirth" min="1950-01-01" max="2022-07-15">
         <br>
         <button type="button" onclick="dateReq()">Découvres ton Poké-Astro !</button> -->
-
+        <div class="menu">
         <label for="day">Ton jour de naissance :</label>
         <select id="day" name="day" value="1">
             <option selected>1</option>
@@ -76,15 +78,17 @@
             <option selected>Décembre</option>
             <option selected>--Choisis--</option>
         </select>
+        </div>
         <br>
         <button type="button" onclick="dateReq()">Découvres ton PokéAstro !</button>
 
     </section>
-    <h1 id="signe"></h1>
-    <h2 id="pokemonEng"></h2>
-    <h3 id="pokemonFr"></h3>
+    <p id="signe"></p>
+    <p id="pokemonEng"></p>
+    <p id="pokemonFr"></p>
     <img id="sprite" src="">
     <p id="horoscope"></p>
+    <p id="description"></p>
     <section>
 
     </section>

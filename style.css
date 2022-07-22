@@ -1,10 +1,25 @@
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.titre {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 h1 {
     color: rgb(3, 25, 224);
 }
 
-
-
-
+.menu {
+  background-color: black;
+}
 
 
 * {
