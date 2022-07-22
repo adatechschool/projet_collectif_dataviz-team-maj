@@ -4,6 +4,26 @@ const arrPoke=["cubone", "snorlax", "mr-mime", "jigglypuff", "arcanine", "chanse
 const arrMonths=["Janvier", "Février", "Mars","Avril","Mai","Juin","Juillet","Août","Septembre","Octobre","Novembre","Décembre"];
 const arrAstroEng=["aries", "taurus", "gemini", "cancer", "leo", "virgo", "libra", "scorpio", "sagittarius", "capricorn", "aquarius", "pisces"];
 
+const noctaliDesc = "Noctali a évolué suite à une longue exposition aux rayons lunaires. Il se cache dans les recoins sombres et attend patiemment le passage de ses ennemis. Les anneaux sur son corps s'illuminent au moment où il bondit. Les nuits de pleine lune, ou s'il est en colère, les anneaux sur sa peau se mettent à briller, terrorisant ceux qui sont proches. Pour se défendre, il émet un gaz empoisonné par les pores de sa peau.";
+const roigadaDesc = "La morsure de Kokiyas a fait de lui un génie dont l'intelligence rivalise avec celle d'un prix Nobel. Tous les jours, Roigada entreprend des recherches pour résoudre les mystères du monde. Cependant, ce pokémon oublie tout ce qu'il a appris si le Kokiyas qui se trouve sur sa tête s'en va. D'une grande intelligence, il sait rester calme en toute situation stressante."
+
+const pourquoi = {
+    "cubone": "pourquoi Bélier",
+    "snorlax": "Dormir. Manger. Ronfler. Ces trois activités rythment parfaitement ta vie et dieu sait que tu la croques à pleines dents (en même temps, tu croquerais dans n’importe quoi pourvu que ça se mange) mais tout le monde s’accorde à dire que tu es une superbe épaule sur laquelle pleurer ou juste piquer un somme, ça, on peut pas te l’enlever. Pas vraiment fan des Pokéballs, ton truc à toi c’est plutôt les Poké Bowls.",
+    "mr-mime": "pourquoi Gémeaux",
+    "jigglypuff": "pourquoi Cancer", 
+    "arcanine": "pourquoi Lion", 
+    "chansey" : "pourquoi Vierge", 
+    "pidgey": "pourquoi Balance", 
+    "umbreon": "pourquoi Scorpion", 
+    "rapidash": "Pourquoi Sagittaire", 
+    "golem": "pourquoi Capricorne", 
+    "slowking": "pourquoi Verseau", 
+    "psyduck": "Pas facile d’être confus et duper comme ça au quotidien, hein, ma petite truite fumée. Tout le monde pense donc que tu es un peu marteau quand en réalité tu es juste une petite créature sans défense et simplement victime de ses pouvoirs mystiques au quotidien. Laisse les gens parler."
+}
+
+console.log(pourquoi.snorlax);
+
 //les variables qu'on va manipuler
 let myMonth;
 let myDay;
@@ -43,6 +63,7 @@ async function buttonClicked() {
     let nomPokemon = await fetchNamePokemon(pokemon)
     let horoscope = await fetchHoroscope(signe)
     let description = await fetchDescription(pokemon)
+    let pourquoiPoke = await pourquoi[pokemon]
 
     console.log(sprite)
     console.log(pokemon)
@@ -55,6 +76,7 @@ async function buttonClicked() {
     document.getElementById("sprite").src = sprite
     document.getElementById("horoscope").innerHTML = horoscope
     document.getElementById("description").innerHTML = description
+    document.getElementById("pourquoi").innerHTML = pourquoiPoke
 
 };
 
@@ -67,9 +89,9 @@ async function fetchSpritePokemon(pokemon) {
 
 async function fetchDescription(pokename) {
     if(pokename=="umbreon"){
-        return "Noctali a évolué suite à une longue exposition aux rayons lunaires. Il se cache dans les recoins sombres et attend patiemment le passage de ses ennemis. Les anneaux sur son corps s'illuminent au moment où il bondit. Les nuits de pleine lune, ou s'il est en colère, les anneaux sur sa peau se mettent à briller, terrorisant ceux qui sont proches. Pour se défendre, il émet un gaz empoisonné par les pores de sa peau."
+        return noctaliDesc;
     } else if(pokename=="slowking"){
-        return "La morsure de Kokiyas a fait de lui un génie dont l'intelligence rivalise avec celle d'un prix Nobel. Tous les jours, Roigada entreprend des recherches pour résoudre les mystères du monde. Cependant, ce pokémon oublie tout ce qu'il a appris si le Kokiyas qui se trouve sur sa tête s'en va. D'une grande intelligence, il sait rester calme en toute situation stressante."
+        return roigadaDesc;
     } else {
     const response = await fetch('https://pokeapi.co/api/v2/pokemon-species/'+pokename+'/', {method: 'GET'});
     const json = await response.json();
@@ -147,8 +169,3 @@ function getSigne(d, m) {
 //         }, 5000)
 //     })
 // }
-
-// const description = {
-//     "Ronflex": "Dormir. Manger. Ronfler. Ces trois activités rythment parfaitement ta vie et dieu sait que tu la croques à pleines dents (en même temps, tu croquerais dans n’importe quoi pourvu que ça se mange) mais tout le monde s’accorde à dire que tu es une superbe épaule sur laquelle pleurer ou juste piquer un somme, ça, on peut pas te l’enlever. Pas vraiment fan des Pokéballs, ton truc à toi c’est plutôt les Poké Bowls.",
-// }
-// description.nomPokemon
