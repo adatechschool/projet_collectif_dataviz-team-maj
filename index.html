@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <header>
+    <header id="haut">
         <img src="/images/LogoPokeAstroSmall.png" alt="pokémon">
     </header>
 
@@ -27,7 +27,7 @@
         <br>
         <button type="button" onclick="dateReq()">Découvres ton Poké-Astro !</button> -->
         <div class="menu">
-            <!-- <label for="day">Ton jour de naissance :</label> -->
+            <label for="day">Ton jour de naissance :</label>
             <select id="day" name="day" value="1">
                 <option selected>1</option>
                 <option selected>2</option>
@@ -60,9 +60,11 @@
                 <option selected>29</option>
                 <option selected>30</option>
                 <option selected>31</option>
-                <option value="null" selected>--Jour--</option>
+                <option selected>--Choisis--</option>
             </select>
-            <!-- <label for="month">Ton mois de naissance :</label> -->
+
+            <label for="month">Ton mois de naissance :</label>
+
             <select id="month" name="month">
                 <option selected>Janvier</option>
                 <option selected>Février</option>
@@ -76,26 +78,79 @@
                 <option selected>Octobre</option>
                 <option selected>Novembre</option>
                 <option selected>Décembre</option>
-                <option value="null" selected>--Mois--</option>
+                <option selected>--Choisis--</option>
             </select>
         </div>
         <br>
         <button type="button" onclick="dateReq()">Découvres ton PokéAstro !</button>
-
-    </section>
-    <p id="signe"></p>
-    <p id="pokemonFr"></p>
-    <p id="pokemonEng"></p>
-    <img id="sprite" src="">
-    <p id="horoscope"></p>
-    <p id="description"></p>
-    <p id="pourquoi"></p>
-    <section>
-
     </section>
 
     <section>
+        <div>
+            <p id="signe"></p>
+            <p id="pokemonEng"></p>
+            <p id="pokemonFr"></p>
+            <img id="sprite" src="">
+            <p id="horoscope"></p>
+            <p id="description"></p>
+            <p id="pourquoi"></p>
+        </div>
 
+        <a href="#ancrePokemon">Psykokwak</a> <!-- ancre -->
+
+        <!-- <div class="slider"> -->
+        <!-- <div class="slideFond"> -->
+        <div class="slidePoke">
+            <div class="slideImg"><img src="images/1.png" alt="bulbizarre"></div>
+            <div class="slideImg"><img src="images/4.png" alt="salameche"></div>
+            <div class="slideImg"><img src="images/7.png" alt="carapuce"></div>
+            <div class="slideImg"><img src="images/25.png" alt="pikachu"></div>
+            <div class="slideImg"><img src="images/133.png" alt="evoli"></div>
+            <div class="slideImg"><img src="images/151.png" alt="mew"></div>
+        </div>
+        <!-- </div> -->
+        <!-- </div> -->
+
+        <!-- <img src="images/ondine.png" alt=""> -->
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Eos repellat necessitatibus impedit rem voluptatum reprehenderit
+            dignissimos aliquid sint? Doloribus, nihil saepe. Et nemo iusto, ut
+            aspernatur laboriosam laborum sit cum!</p>
+
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Placeat sapiente fuga dolore! Aliquam perferendis nemo id
+            ipsam sit similique impedit consequuntur expedita autem cupiditate
+            quas fugiat aut, unde recusandae asperiores?</p>
+    </section>
+
+    <section>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Quia enim dicta dolore earum provident aut id iure saepe quaerat nobis,
+            soluta, rem sed itaque asperiores hic unde tempora reprehenderit? Eos.</p>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam suscipit
+            magnam facilis amet vitae illo quod consequuntur culpa commodi, dolore quo
+            soluta perferendis molestiae libero nam nulla inventore qui illum?</p>
+    </section>
+
+
+    <section id="ancrePokemon">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero quis
+            cupiditate qui asperiores veritatis tenetur voluptas, suscipit ducimus expedita,
+            natus numquam voluptate, aliquid alias iste sed provident molestiae. Blanditiis,
+            labore?</p>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas magni fugiat
+            labore nesciunt debitis quibusdam deleniti dolorem laborum consequuntur, et,
+            velit laboriosam totam porro minima ex ipsam, voluptatem ipsum veritatis.</p>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam delectus magni
+            quae, optio adipisci molestias voluptas voluptates perspiciatis alias saepe
+            accusantium assumenda maiores quasi mollitia illum, neque eligendi dicta
+            libero.</p>
+
+        <a href="#haut">Retour à la page principale.</a> <!-- retour en haut de la page -->
     </section>
 
     <footer>
