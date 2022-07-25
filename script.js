@@ -8,7 +8,7 @@ const noctaliDesc = "Noctali a évolué suite à une longue exposition aux rayon
 const roigadaDesc = "La morsure de Kokiyas a fait de lui un génie dont l'intelligence rivalise avec celle d'un prix Nobel. Tous les jours, Roigada entreprend des recherches pour résoudre les mystères du monde. Cependant, ce pokémon oublie tout ce qu'il a appris si le Kokiyas qui se trouve sur sa tête s'en va. D'une grande intelligence, il sait rester calme en toute situation stressante."
 
 const pourquoi = {
-    "Bélier": "Quand on te vois débarquer, avec ton casque et ta massue, on sait qu'il ne faut pas te chercher ! Impulsif&middotve et un peu brut de décoffrage, tu déboules à 2 000 à l'heure dans l'arène pour rugir, dégommer et donner des coups de crânes. Tu la joues gros dino féroce mais c'est surtout pour cacher que sous l'armure, se cache un animal tout mignon, tout doux, un baby dino qui a gardé ses dents de lait et son âme d'enfant.",
+    "Bélier": "Quand on te vois débarquer, avec ton casque et ta massue, on sait qu'il ne faut pas te chercher ! Impulsif&middotve et un peu brut de décoffrage, tu déboules à 2 000 à l'heure dans l'arène pour rugir, dégommer et donner des coups de crânes. Tu la joues gros dino féroce mais c'est surtout pour cacher que, sous l'armure, se cache un animal tout mignon, tout doux, un baby dino qui a gardé ses dents de lait et son âme d'enfant.",
     "Taureau": "Dormir. Manger. Ronfler. Ces trois activités rythment parfaitement ta vie et dieu sait que tu la croques à pleines dents (en même temps, tu croquerais dans n’importe quoi pourvu que ça se mange) mais tout le monde s’accorde à dire que tu es une superbe épaule sur laquelle pleurer ou juste piquer un somme, ça, on peut pas te l’enlever. Pas vraiment fan des Pokéballs, ton truc à toi c’est plutôt les Poké Bowls.",
     "Gémeaux": "Les gens disent de toi que tu es plutôt loufoque mais personne ne sait trop ce que tu fais là et pourquoi étant donné qu’on ne t’invite plus depuis que tu t’es mis à imiter les personnes en face de toi. Il ne te reste plus qu’à aller postuler à la Foire de Crête pour tenter une reconversion professionnelle.",
     "Cancer": "Tout mignon, tout rond et tout câlinou, tu es un superbe atout à avoir dans son équipe quand le moral est au plus bas. Mais attention, quand tu te sens attaqué, tu n’hésites pas à démontrer toute l’étendue de ta férocité et à détruire tes adversaires avec une bonne grosse berceuse du sheitan qui fait bien mal mon pote.", 
@@ -89,9 +89,10 @@ async function buttonClicked() {
     console.log(horoscope)
     console.log(nomPokemon)
 
-    document.getElementById("signe").innerHTML = signe
+    document.getElementById("signe").innerHTML = `Tu es ${signe},`
+    document.getElementById("tonsigne").innerHTML = "ton PokéAstro est..."
     document.getElementById("pokemonEng").innerHTML = (pokemon.charAt(0).toUpperCase()+pokemon.slice(1)).italics()
-    document.getElementById("pokemonFr").innerHTML = nomPokemon
+    document.getElementById("pokemonFr").innerHTML = `${nomPokemon} !`
     document.getElementById("sprite").src = sprite
     document.getElementById("horoscope").innerHTML = horoscope
     document.getElementById("description").innerHTML = description
