@@ -1,5 +1,5 @@
 //nos données constantes
-const arrAstro=["Bélier", "Taureau", "Gémeaux", "Cancer", "Lion", "Vierge", "Balance", "Scorpion", "Sagittaire", "Capricone", "Verseau", "Poissons"];
+const arrAstro=["Bélier", "Taureau", "Gémeaux", "Cancer", "Lion", "Vierge", "Balance", "Scorpion", "Sagittaire", "Capricorne", "Verseau", "Poissons"];
 const arrPoke=["cubone", "snorlax", "mr-mime", "jigglypuff", "arcanine", "chansey", "pidgey", "umbreon", "rapidash", "golem", "slowking", "psyduck"];
 const arrMonths=["Janvier", "Février", "Mars","Avril","Mai","Juin","Juillet","Août","Septembre","Octobre","Novembre","Décembre"];
 const arrAstroEng=["aries", "taurus", "gemini", "cancer", "leo", "virgo", "libra", "scorpio", "sagittarius", "capricorn", "aquarius", "pisces"];
@@ -8,21 +8,21 @@ const noctaliDesc = "Noctali a évolué suite à une longue exposition aux rayon
 const roigadaDesc = "La morsure de Kokiyas a fait de lui un génie dont l'intelligence rivalise avec celle d'un prix Nobel. Tous les jours, Roigada entreprend des recherches pour résoudre les mystères du monde. Cependant, ce pokémon oublie tout ce qu'il a appris si le Kokiyas qui se trouve sur sa tête s'en va. D'une grande intelligence, il sait rester calme en toute situation stressante."
 
 const pourquoi = {
-    "cubone": "pourquoi Bélier",
-    "snorlax": "Dormir. Manger. Ronfler. Ces trois activités rythment parfaitement ta vie et dieu sait que tu la croques à pleines dents (en même temps, tu croquerais dans n’importe quoi pourvu que ça se mange) mais tout le monde s’accorde à dire que tu es une superbe épaule sur laquelle pleurer ou juste piquer un somme, ça, on peut pas te l’enlever. Pas vraiment fan des Pokéballs, ton truc à toi c’est plutôt les Poké Bowls.",
-    "mr-mime": "pourquoi Gémeaux",
-    "jigglypuff": "pourquoi Cancer", 
-    "arcanine": "pourquoi Lion", 
-    "chansey" : "pourquoi Vierge", 
-    "pidgey": "pourquoi Balance", 
-    "umbreon": "pourquoi Scorpion", 
-    "rapidash": "Pourquoi Sagittaire", 
-    "golem": "pourquoi Capricorne", 
-    "slowking": "pourquoi Verseau", 
-    "psyduck": "Pas facile d’être confus et duper comme ça au quotidien, hein, ma petite truite fumée. Tout le monde pense donc que tu es un peu marteau quand en réalité tu es juste une petite créature sans défense et simplement victime de ses pouvoirs mystiques au quotidien. Laisse les gens parler."
+    "Bélier": "Quand on te vois débarquer, avec ton casque et ta massue, on sait qu'il ne faut pas te chercher ! Impulsif&middotve et un peu brut de décoffrage, tu déboules à 2 000 à l'heure dans l'arène pour rugir, dégommer et donner des coups de crânes. Tu la joues gros dino féroce mais c'est surtout pour cacher que sous l'armure, se cache un animal tout mignon, tout doux, un baby dino qui a gardé ses dents de lait et son âme d'enfant.",
+    "Taureau": "Dormir. Manger. Ronfler. Ces trois activités rythment parfaitement ta vie et dieu sait que tu la croques à pleines dents (en même temps, tu croquerais dans n’importe quoi pourvu que ça se mange) mais tout le monde s’accorde à dire que tu es une superbe épaule sur laquelle pleurer ou juste piquer un somme, ça, on peut pas te l’enlever. Pas vraiment fan des Pokéballs, ton truc à toi c’est plutôt les Poké Bowls.",
+    "Gémeaux": "Les gens disent de toi que tu es plutôt loufoque mais personne ne sait trop ce que tu fais là et pourquoi étant donné qu’on ne t’invite plus depuis que tu t’es mis à imiter les personnes en face de toi. Il ne te reste plus qu’à aller postuler à la Foire de Crête pour tenter une reconversion professionnelle.",
+    "Cancer": "Tout mignon, tout rond et tout câlinou, tu es un superbe atout à avoir dans son équipe quand le moral est au plus bas. Mais attention, quand tu te sens attaqué, tu n’hésites pas à démontrer toute l’étendue de ta férocité et à détruire tes adversaires avec une bonne grosse berceuse du sheitan qui fait bien mal mon pote.", 
+    "Lion": "Avec ta crinière flamboyante et ton pas altier, tu envoies du lourd. Vénéré&middote à travers l'univers Pokémon, tu te sais au-dessus de la mêlée et tu es rarement sujet&middote aux tergiversations. Comme le signe du Lion dominé par l'astre solaire, tu tires ta puissance de ton feu intérieur et tu nous aides, nous pauvres mortels, à nous inspirer de ta force tranquille pour lutter contre le syndrôme de l'imposteur.", 
+    "Vierge" : "À l’instar de cette petite personne infirmière, tu es toujours prêt à rendre service et à distribuer la joie et des oeufs autour de toi. On t’aime pour ces petites étoiles qui brillent dans tes yeux quand tu rends service aux gens et qu’ils te disent que tu as raison, mais on te déteste quand tu as tort. Moui vaut mieux pas rester dans les parages quand tu te mets à chonchonner.", 
+    "Balance": "Avec ton joli plumage, tu égayes le ciel de Bourg Palette et de ses forêts. Adaptable et de bonne compagnie, tu sais suivre les courants d'air chaud et éviter les zones hasardeuse pour planer, peinard&middote, à l'abri des embrouilles. Tout est jeu d'équilibre... Toi dont le signe astrologie est dominé par la planète Vénus, tu as le goût de l'hamonie et du consensus, mais pas du conflit. Comme un Roucool qui bat des ailes au premier bruit suspect, tu as aussi le don de te défiler face au danger (et à la moindre prise de décision, miskine).", 
+    "Scorpion": "Parce que tu es le signe de la mort et de la renaissance, c’est dans l’ombre que tu puises toutes tes forces pendant que tout le monde autour de toi passe son temps à se dorer la pilule. Ton mysticisme légendaire fait que les soirs de pleine lune, tu brilles comme un p’tit diamant ce qui a tendance à rendre fou de désir tous les habitants du quartier. Malheureusement tu habites à Leménil-Mitry.", 
+    "Sagittaire": "Élu meilleur sprinteur du Pokéworld, ta devise à toi c’est « galope la vie avant qu’elle te galope ». Du coup tu as un peu tout le temps le feu aux fesses et ça commence à légèrement inquiéter ton entourage. Il serait peut-être temps de te poser et réfléchir un peu au sens de la vie non ?", 
+    "Capricorne": "Tu as l'air indestructible grâce à ta carapace. Comme Grolem, dont la peau se solidifie comme une armure, tu resistes à la pression (et parfois aussi au fun). Ancré&middote au sol, tu ne perds jammais de vu tes objectifs et tu avances lentement mais sûrement dans leur direction. Planqué&middote sous tes rochers, on pourrait te croire imperméable aux émotions. Mais toute cette pierre vient en réalité protéger un cœur fragile, que tu laisse apparaître hors de tout danger.", 
+    "Verseau": "Roigada est une drôle de créature possédant une intelligence clairement supérieure à la moyenne, ce qui te confère le pouvoir d’attirer les gens comme des aimants, jusqu’à ce qu’on se rende compte que tu es juste complètement gratiné à l’intérieur comme le laissait présager ton goût en matière de chapeaux. Et puis parce que tu étais un hipster avant la naissance des hipsters, tu te nourris exclusivement d’eau de coco et d’algues, à l’instar de ton Pokémon totem.", 
+    "Poissons": "Pas facile d’être confus et duper comme ça au quotidien, hein, ma petite truite fumée. Tout le monde pense donc que tu es un peu marteau quand en réalité tu es juste une petite créature sans défense et simplement victime de ses pouvoirs mystiques au quotidien. Laisse parler les gens."
 }
 
-console.log(pourquoi.snorlax);
+console.log(pourquoi.Taureau);
 
 //les variables qu'on va manipuler
 let myMonth;
@@ -63,7 +63,7 @@ async function buttonClicked() {
     let nomPokemon = await fetchNamePokemon(pokemon)
     let horoscope = await fetchHoroscope(signe)
     let description = await fetchDescription(pokemon)
-    let pourquoiPoke = await pourquoi[pokemon]
+    let pourquoiPoke = pourquoi[signe]
 
     console.log(sprite)
     console.log(pokemon)
@@ -87,6 +87,7 @@ async function fetchSpritePokemon(pokemon) {
     return sprite.sprites.other.home.front_default;
 };
 
+//récupérer la description du Pokémon depuis l'API
 async function fetchDescription(pokename) {
     if(pokename=="umbreon"){
         return noctaliDesc;
@@ -100,14 +101,14 @@ async function fetchDescription(pokename) {
     };
 };
 
-
+//récupérer le nom français du Pokémon
 async function fetchNamePokemon(name){
     const result = await fetch('https://pokeapi.co/api/v2/pokemon-species/'+name+'/');
     const nom = await result.json();
     return nom.names[4].name;
 };
 
-//récupérer l'horoscope
+//récupérer l'horoscope en anglais
 async function fetchHoroscope(astro) {
     const myAstroEng = arrAstroEng[arrAstro.indexOf(astro)]
     const response = await fetch('https://aztro.sameerkumar.website/?sign=' + myAstroEng + '&day=today', {method: 'POST'});
@@ -115,7 +116,7 @@ async function fetchHoroscope(astro) {
     return horoscope.description
 }; 
 
-//récupérer le nom du pokémon (en anglais)
+//récupérer le nom du Pokémon en anglais
 function getPokemonName(astro) {
     return arrPoke[arrAstro.indexOf(astro)];
 };
