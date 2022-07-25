@@ -1,4 +1,11 @@
-<<<<<<< HEAD
+@font-face {
+  font-family: 'Pokemon_classic';
+  src: url(fonts/Pokemon_classic.ttf),
+       url(fonts/pokemom_solid.ttf),
+       url(fonts/pokemon_hollow.ttf),
+       url(fonts/pokemon_pixel_font.ttf)
+}
+
 header {
   display: flex;
   flex-direction: column;
@@ -12,17 +19,6 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-h1 {
-    color: rgb(3, 25, 224);
-=======
-@font-face {
-  font-family: 'Pokemon_classic';
-  src: url(fonts/Pokemon_classic.ttf),
-       url(fonts/pokemom_solid.ttf),
-       url(fonts/pokemon_hollow.ttf),
-       url(fonts/pokemon_pixel_font.ttf)
 }
 
 body {
@@ -48,14 +44,15 @@ div.slidePoke {
   width: calc(500px * 4);
   animation: glisse 15s infinite ease;
   height: 150px;
-  /* background-color: salmon;
-  border: black; */
+  background-color: salmon;
+  border: black;
 }
 
 .slideImg {
   width: 50%;
   height: 50%;
   margin: 100px;
+  background-color: yellow;
 }
 
 
@@ -80,11 +77,9 @@ div.slidePoke {
   100% { /* "100%" correspond à la fin de l'animation sur l'axe x*/
     transform: translateX(0); /* position de l'animation, l'image revient au début */
   }
->>>>>>> alex
+
 }
 
-.menu {
-  background-color: black;
-}
+
 
 
