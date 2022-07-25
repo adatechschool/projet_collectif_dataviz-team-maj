@@ -43,6 +43,25 @@ dayChoose.onchange = () => {
     console.log(myDay);
 };
 
+//print l'astro
+function getMyAstro(){
+    myAstro = getAstro(myDay, myMonth);
+    const astroOnScreen = `Tu es ${myAstro} !`
+    document.getElementById("printAstro").innerHTML = astroOnScreen;
+    console.log(myAstro);
+};
+
+//print le poké
+async function getMyPoke(){
+    myPoke = await arrPoke[arrAstro.indexOf(myAstro)];
+    console.log(myPoke);
+    const pokeOnScreen = `Ton PokéAstro est ${myPoke} :)`
+    document.getElementById("printPoke").innerHTML = pokeOnScreen;
+    console.log(myPoke);
+}
+
+
+
 //vérifie qu'il y a une date, si oui, print l'astro et le poké
 async function dateReq(){
     if((myDay == null) || myMonth == null){
