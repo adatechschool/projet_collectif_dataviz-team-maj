@@ -45,7 +45,7 @@ body {
   overflow: hidden;
 } */
 
-div.slidePoke {
+/* div.slidePoke {
   display:flex;
   align-items: center;
   flex-direction: row;
@@ -54,14 +54,14 @@ div.slidePoke {
   height: 150px;
   background-color: salmon;
   border: black;
-}
+} */
 
-.slideImg {
+/* .slideImg {
   width: 50%;
   height: 50%;
   margin: 100px;
   background-color: yellow;
-}
+} */
 
 
 @keyframes glisse {  /* pack qui va permetre de définir plusieurs niveaux d'animation*/
