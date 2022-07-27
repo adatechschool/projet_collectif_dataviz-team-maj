@@ -99,6 +99,51 @@ header {
 #bulleS {
   width: 50%;
 }
+
+
+.pageDeux {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.reponse {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.reponse1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.reponse2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.reponse3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#description {
+  background-color: aliceblue;
+  margin: 5px;
+  margin-block: 5px;
+  color:rgb(3, 8, 103);
+  font-size: 12px;
+}
+
 /* .pageDeux {
   display: flex;
   flex-direction: row;
@@ -107,7 +152,7 @@ header {
 } */
 
 
-  .namePoke {
+  /* .namePoke {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -127,7 +172,7 @@ header {
   width: 80%;
   margin-left: 100px;
   margin-top: 50px;
-}
+} */
 
 .vieuxP {
   display: flex;
@@ -245,6 +290,30 @@ button {
 #boutonGenerer {
   height: 70px;
   width: 160px;
+}
+
+.boutonReco {
+  display: flex;
+  justify-content: center;
+}
+
+#boutonReco {
+  background-color: rgb(14, 50, 233);
+	border-radius: 15px;
+	border: solid rgb(3, 8, 103);
+  height: 50px;
+  width: 160px;
+}
+
+#boutonReco:hover {
+  background-color: rgb(249, 217, 10);
+}
+
+#pokemonFr {
+  font: bolder;
+  font-family: src=url(fonts/pokemom_solid.ttf);
+  font-size: 200%;
+  color: white;
 }
 /* .slider {
   overflow: hidden;

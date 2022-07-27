@@ -165,17 +165,18 @@ async function buttonClicked() {
     console.log(horoscope);
     console.log(nomPokemon);
 
-    document.getElementById("prenom").innerHTML = `${prenomUser}, `;
-    document.getElementById("signe").innerHTML = `tu es ${signe}, `;
-    document.getElementById("tonPokeAstro").innerHTML = "ton PokéAstro est... ";
-    document.getElementById("pokemonFr").innerHTML = `${nomPokemon} !`;
+    document.getElementById("nom").innerHTML = `${prenomUser}, tu es ${signe},<br/>ton PokéAstro est...`
+    // document.getElementById("prenom").innerHTML = `${prenomUser}, `;
+    // document.getElementById("signe").innerHTML = `tu es ${signe}, `;
+    // document.getElementById("tonPokeAstro").innerHTML = "ton PokéAstro est... ";
+    document.getElementById("pokemonFr").innerHTML = `<br/>${nomPokemon} !<br/>`;
     document.getElementById("pokemonEng").innerHTML = (
         pokemon.charAt(0).toUpperCase() + pokemon.slice(1)
     ).italics();
     document.getElementById("sprite").src = sprite;
-    document.getElementById("horoscope").innerHTML = horoscope;
-    document.getElementById("description").innerHTML = description;
-    document.getElementById("pourquoi").innerHTML = pourquoiPoke;
+    document.getElementById("horoscope").innerHTML = `Ton horoscope du jour :<br/>${horoscope}`;
+    document.getElementById("description").innerHTML = `Description :<br/>${description}`;
+    document.getElementById("pourquoi").innerHTML = `Pourquoi c'est ton PokéAstro :<br/>${pourquoiPoke}`;
 }
 
 //récupérer l'image URL du Sprite
