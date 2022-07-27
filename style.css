@@ -6,26 +6,19 @@
        url(fonts/pokemon_pixel_font.ttf)
 }
 
-/*header {
+header {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}*/
-#haut {
-  size: auto;
-	width: 80%;
-	height: auto;
-	text-align: center;
-	margin: auto;
 }
 
-/*.titre {
+.titre {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}*/
+}
 
 section {
   display: flex;
@@ -88,7 +81,7 @@ button:hover {
   overflow: hidden;
 } */
 
-div.slidePoke {
+/* div.slidePoke {
   display:flex;
   align-items: center;
   flex-direction: row;
@@ -97,14 +90,14 @@ div.slidePoke {
   height: 150px;
   background-color: salmon;
   border: black;
-}
+} */
 
-.slideImg {
+/* .slideImg {
   width: 50%;
   height: 50%;
   margin: 100px;
   background-color: yellow;
-}
+} */
 
 
 @keyframes glisse {  /* pack qui va permetre de définir plusieurs niveaux d'animation*/
