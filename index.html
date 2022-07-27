@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css">
+    <!-- <link> /// font à choisir -->
+    <title>Bienvenue sur PokéAstro</title>
+    <link rel="icon" sizes="16x16" type="images/ico" href="images/faviconPoke.ico">
+</head>
+
+<body>
+    <header id="haut">
+        <img src="/images/LogoPokeAstroSmall.png" alt="pokémon">
+    </header>
+
+    <section>
+
+            <img src="images/ondine.png" alt="ondine" id="ondine">
+        
+        <div class="titre">
+            <h1>Quelle est ta date de naissance, jeune dresseur&middoteuse ?</h1>
+
+        <!-- <label for="myBirth">Quelle est ta date de naissance ?</label>
+        <input type="date" id="myBirth" name="myBirth" min="1950-01-01" max="2022-07-15">
+        <br>
+        <button type="button" onclick="dateReq()">Découvres ton Poké-Astro !</button> -->
+        <div class="menu">
+            <label for="day">Ton jour de naissance :</label>
+            <select id="day" name="day" value="1">
+                <option selected>1</option>
+                <option selected>2</option>
+                <option selected>3</option>
+                <option selected>4</option>
+                <option selected>5</option>
+                <option selected>6</option>
+                <option selected>7</option>
+                <option selected>8</option>
+                <option selected>9</option>
+                <option selected>10</option>
+                <option selected>11</option>
+                <option selected>12</option>
+                <option selected>13</option>
+                <option selected>14</option>
+                <option selected>15</option>
+                <option selected>16</option>
+                <option selected>17</option>
+                <option selected>18</option>
+                <option selected>19</option>
+                <option selected>20</option>
+                <option selected>21</option>
+                <option selected>22</option>
+                <option selected>23</option>
+                <option selected>24</option>
+                <option selected>25</option>
+                <option selected>26</option>
+                <option selected>27</option>
+                <option selected>28</option>
+                <option selected>29</option>
+                <option selected>30</option>
+                <option selected>31</option>
+                <option selected>--Choisis--</option>
+            </select>
+
+            <label for="month">Ton mois de naissance :</label>
+
+            <select id="month" name="month">
+                <option selected>Janvier</option>
+                <option selected>Février</option>
+                <option selected>Mars</option>
+                <option selected>Avril</option>
+                <option selected>Mai</option>
+                <option selected>Juin</option>
+                <option selected>Juillet</option>
+                <option selected>Août</option>
+                <option selected>Septembre</option>
+                <option selected>Octobre</option>
+                <option selected>Novembre</option>
+                <option selected>Décembre</option>
+                <option selected>--Choisis--</option>
+            </select>
+        </div>
+        <br>
+        <button href="#bas" type="button" onclick="dateReq()">Découvres ton PokéAstro !</button>
+        </div>
+        
+            <img src="images/sacha.png" alt="sacha" id="sacha">
+        
+    </section>
+
+    <section>
+        <div class="astroPoke">
+            <div class="main">
+                <div id="signe"></div>
+                <div id="pokemonEng"></div>
+                <div id="pokemonFr"></div>
+                <div id="sprite" src=""></div>
+            </div>
+            <div>
+                <div id="horoscope"></div>
+            </div>
+            <div>
+                <div id="description"></div>
+                <div id="pourquoi"></div>
+            </div>
+        </div>
+
+        <a href="#ancrePokemon">Psykokwak</a> <!-- ancre -->
+
+        
+
+        <!-- <img src="images/ondine.png" alt=""> -->
+
+      
+
+    <section id="bas">
+
+        <a href="#haut">Retour à la page principale.</a> <!-- retour en haut de la page -->
+    </section>
+
+    <footer>
+        <!-- <div class="slider"> -->
+        <!-- <div class="slideFond"> -->
+            <div class="slidePoke">
+                <div class="slideImg"><img src="images/1.png" alt="bulbizarre"></div>
+                <div class="slideImg"><img src="images/4.png" alt="salameche"></div>
+                <div class="slideImg"><img src="images/7.png" alt="carapuce"></div>
+                <div class="slideImg"><img src="images/25.png" alt="pikachu"></div>
+                <div class="slideImg"><img src="images/133.png" alt="evoli"></div>
+                <div class="slideImg"><img src="images/151.png" alt="mew"></div>
+            </div>
+            <!-- </div> -->
+            <!-- </div> -->
+        <p>2022 - Ce service vous est offert par la team MAJ.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
