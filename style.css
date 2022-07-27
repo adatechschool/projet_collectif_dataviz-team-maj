@@ -137,11 +137,19 @@ header {
 }
 
 #pierre {
-  width: 30%;
+  width: 40%;
+  margin-top: -40px;
 }
 
 #bulleP {
-  width: 30%;
+  width: 70%;
+}
+
+.boutonP {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 /* .nomPokemon {

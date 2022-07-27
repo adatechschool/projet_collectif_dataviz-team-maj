@@ -133,11 +133,17 @@ async function getMyPoke() {
 }
 
 //vérifie qu'il y a une date, si oui, print l'astro et le poké
-async function dateReq() {
+async function genererPokeAstro() {
     if (myDay == null || myMonth == null || prenomUser == null) {
         window.open("/page.html");
     } else {
         await buttonClicked();
+    }
+}
+
+function checkBouton(){
+    if (myDay == null || myMonth == null || prenomUser == null) {
+        window.open("/page.html");
     }
 }
 
