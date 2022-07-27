@@ -23,8 +23,13 @@
                 <img src="images/ondine.png" alt="ondine" id="ondine">
             </div>
             <div class="carton">
-                <h1>Quelle est ta date de naissance, jeune dresseur&middoteuse ?</h1>
-
+                <div class="bulleO"><img src="images/bulle ondine.gif" id="bulleO"></div>
+                <div class="bulleS"><img src="images/bulle sacha.gif" id="bulleS"></div>
+                <!-- <h1>Quelle est ta date de naissance, jeune dresseur&middoteuse ?</h1> -->
+                <div class="prenom">
+                    <label for="prenomUser">Ton prénom :</label>
+                    <input type="text" id="prenomUser" name="prenomUser" required>
+                </div>
                 <div class="date">
                     <label for="day">Ton jour de naissance :</label>
                     <select id="day" name="day" value="1">
@@ -80,8 +85,8 @@
                         <option selected>--Choisis--</option>
                     </select>
                 </div>
-                <div class="boutonDate">
-                    <button type="button" onclick="dateReq()">Génères ton PokéAstro...</button>
+                <div class="boutonGenerer">
+                    <button onclick="dateReq()"><img src="images/bouton.png" alt="Génères ton PokéAstro" id="boutonGenerer"></button>
                 </div>
                 <div class="boutonGo">
                     <a href="#bas"><img src="images/boutonGo.png" alt="boutonGo" id="boutonGo"></a>
@@ -96,10 +101,11 @@
         <section class="pageDeux">
             
             <div class="namePoke">
-                <span id="signe"></span>
-                <span id="tonPokeAstro"></span>
-                <span id="pokemonFr"><br></span>
-                <span id="pokemonEng"></span>
+                <p id="prenom"></p>
+                <p id="signe"></p>
+                <p id="tonPokeAstro"></p>
+                <p id="pokemonFr"></p>
+                <p id="pokemonEng"></p>
             </div>
             
             <div class="astroResult">

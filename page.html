@@ -1,108 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ton Poké-Astro</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" media="screen" href="style.css">
+        <title>Attention...</title>
+        <link rel="icon" sizes="16x16" type="images/ico" href="images/faviconPoke.ico">
+    </head>
 <body>
-    <img id="pokeSprite" src="" alt=""/>
-    <h1 id="pokeFrench"></h1>
-    <script>
-
-    // let myurl = 'https://pokeapi.co/api/v2/pokemon-species/snorlax/'
-    
-    // function fetchNamePokemon(url){
-    // const response = await fetch(url);
-    // const name = await response.json();
-    // console.log(name)
-    // // return frenchName.sprites.other.home.front_default;
-    // };
-    // fetchNamePokemon(myurl)
-
-        const myUrl = 'https://pokeapi.co/api/v2/pokemon-species/clefairy/'
-        fetch(myUrl)
-        .then(resp => resp.json())
-        .then(json => {
-            const frenchName = json.names[4].name;
-            console.log(frenchName);
-        });
-
-
-
-        // let myPoke = "snorlax"
-        // let myUrl = "https://pokeapi.co/api/v2/pokemon/" + myPoke + "/";
-
-        // fetch(myUrl)
-        // .then(async response => {
-        //         const jsonData = await response.json();
-        //         const spriteUrl = await jsonData.sprites.other.home.front_default;
-        //         const spriteImg = await spriteUrl;
-        //         document.getElementById("pokeSprite").src = spriteImg;
-        //         console.log(spriteImg);
-        // })
-        // .catch((error) => {
-		// document.write('Poké pas de ball... Ce pokémon n\'existe pas.');
-        // });
-
-        // fetch(myUrl)
-        // .then(resp => resp.json())
-        // .then(json => {
-        //     const spriteUrl = json.sprites.other.home.front_default;
-        //     const spriteImg = spriteUrl;
-        //     document.getElementById("pokeSprite").src = spriteImg;
-        //     console.log(spriteImg);
-        // })
-        // .catch((error) => {
-		// document.write('Poké pas de ball... Ce pokémon n\'existe pas.');
-        // });
-
-
-        // // const myUrlAstro = 'https://aztro.sameerkumar.website/?sign=aries&day=today';
-        // const myUrlAstro = 'https://aztro.sameerkumar.website/?sign=' + myAstroEng + '&day=today'
-        // fetch(myUrlAstro, {method: 'POST'})
-        // .then(resp => resp.json())
-        // .then(json => {
-        //     const horoscope = json.description;
-        //     console.log(horoscope);
-        // });
-
-        // async function printPokeSprite(){
-        //     const spriteImg = await 
-        // }
-        
-        // printSprites();
-        // function printSprites(){
-        // let myUrl = "https://pokeapi.co/api/v2/pokemon-species/" + "snorlax" + "/"
-
-        // fetch("https://pokeapi.co/api/v2/pokemon/clefairy/")
-        // .then()
-
-        // let p = fetch(myUrl);
-
-        // p.then(function(resultat){
-        //     if(resultat.ok){
-        //         return resultat.json();
-        //     }
-        // });
-
-        // p.then(function(data){
-        //     if(data.ok){
-        //     console.log(data);
-        //     };
-        // })
-
-        // p.then((data) => {
-        //     data=data.json();
-        //     console.log(data);
-        // });
-
-        // p.catch((error) => {
-        //     console.log(error);
-        // });
-        // }
-
-    </script>
+    <header id="haut">
+        <img src="/images/LogoPokeAstroSmall.png" alt="pokémon">
+        <!-- <a href="#ancrePokemon">Psykokwak</a> -->
+    </header>
+    <div class="vieuxP">
+        <img src="images/vieuxpierre.png" id="pierre">
+        <img src="images/bulle pierre.gif" id="bulleP">
+    </div>
 </body>
 </html>

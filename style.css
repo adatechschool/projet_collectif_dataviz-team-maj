@@ -21,6 +21,7 @@ header {
 }
 
 .pageUne {
+  margin-top: -80px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -28,17 +29,47 @@ header {
   padding: 50px;
 }
 
-.ondine {
+/* #bulleO {
   display: flex;
+  justify-content: center;
+  height: 100px;
+}
+
+#bulleS {
+  display: flex;
+  justify-content: center;
+  height: 100px;
+} */
+
+.ondine {
+  position:relative;
+  right:50px;
+  /* display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
   width: 25%;
 }
 
 #ondine {
-  width: 85%;
-  margin-top: -75px;
+  width: 70%;
+  /* margin-top: -75px; */
+}
+
+
+.sacha {
+  position:relative;
+  left:50px;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; */
+  width:25%;
+}
+
+#sacha {
+	width:100%;
+  /* margin-top: -45px; */
 }
 
 .carton {
@@ -46,23 +77,28 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-left: 50px;
-  margin-right: 20px;
-  /* width: 50%; */
+  /* margin-left: 50px;
+  margin-right: 20px; */
+  width: 50%;
 }
 
-.sacha {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.bulleO {
+  position:relative;
+  right:100px;
 }
 
-#sacha {
-	width: 60%;
-  margin-top: -45px;
+#bulleO {
+  width: 50%;
 }
 
+.bulleS {
+  position:relative;
+  left:300px;
+}
+
+#bulleS {
+  width: 50%;
+}
 /* .pageDeux {
   display: flex;
   flex-direction: row;
@@ -91,6 +127,21 @@ header {
   width: 80%;
   margin-left: 100px;
   margin-top: 50px;
+}
+
+.vieuxP {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#pierre {
+  width: 30%;
+}
+
+#bulleP {
+  width: 30%;
 }
 
 /* .nomPokemon {
@@ -150,6 +201,23 @@ header {
   align-items: center;
 } */
 
+/* button {
+	display: inline-block;
+  font-family: 'Pokemon_classic';
+  text-align: center;
+	background-color: rgb(14, 50, 233);
+	border-radius: 15px;
+	border: solid rgb(3, 8, 103);
+	text-align: center;
+	font-size: 15px;
+	padding: 5px;
+	margin: 10px;
+	width: 200px;
+} */
+button:hover {
+	background-color: rgb(249, 217, 10);
+}
+
 button {
 	display: inline-block;
   font-family: 'Pokemon_classic';
@@ -162,12 +230,14 @@ button {
 	padding: 5px;
 	margin: 10px;
 	width: 200px;
-}
-button:hover {
-	background-color: rgb(249, 217, 10);
+  height: 70px;
+  width: 160px;
 }
 
-
+#boutonGenerer {
+  height: 70px;
+  width: 160px;
+}
 /* .slider {
   overflow: hidden;
 } */
