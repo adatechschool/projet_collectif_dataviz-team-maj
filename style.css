@@ -250,23 +250,22 @@ button {
   overflow: hidden;
 } */
 
-/* div.slidePoke {
+div.slidePoke {
   display:flex;
   align-items: center;
   flex-direction: row;
   width: calc(500px * 4);
   animation: glisse 15s infinite ease;
   height: 150px;
-  background-color: salmon;
   border: black;
-} */
+}
 
-/* .slideImg {
+.slideImg {
   width: 50%;
   height: 50%;
-  margin: 100px;
-  background-color: yellow;
-} */
+  margin: 10px;
+  background-color: salmon;
+}
 
 
 @keyframes glisse {  /* pack qui va permetre de définir plusieurs niveaux d'animation*/
