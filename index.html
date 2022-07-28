@@ -8,13 +8,13 @@
     <link rel="stylesheet" type="text/css" media="screen" href="style.css">
     <title>Bienvenue sur PokéAstro</title>
     <link rel="icon" sizes="16x16" type="images/ico" href="images/faviconPoke.ico">
+    <audio src="music/musiquePoke.mp3" autoplay controls loop hidden="hidden"></audio>
 </head>
 
 <body>
 
     <header id="haut">
-        <img src="/images/LogoPokeAstroSmall.png" alt="pokémon">
-        <!-- <a href="#ancrePokemon">Psykokwak</a> -->
+        <img src="images/LogoPokeAstroSmall.png" alt="pokémon" id="logo">
     </header>
 
     <main>
@@ -25,7 +25,6 @@
             <div class="carton">
                 <div class="bulleO"><img src="images/bulle ondine.gif" id="bulleO"></div>
                 <div class="bulleS"><img src="images/bulle sacha.gif" id="bulleS"></div>
-                <!-- <h1>Quelle est ta date de naissance, jeune dresseur&middoteuse ?</h1> -->
                 <div class="prenom">
                     <label for="prenomUser">Ton prénom :</label>
                     <input type="text" id="prenomUser" name="prenomUser" required>
@@ -89,7 +88,8 @@
                     <button onclick="genererPokeAstro()"><img src="images/bouton.png" alt="Génères ton PokéAstro" id="boutonGenerer"></button>
                 </div>
                 <div class="boutonGo">
-                    <a onclick="checkBouton()" href="#bas"><img src="images/boutonGo.png" alt="boutonGo" id="boutonGo"></a>
+                    <a onclick="checkBouton()" href="#bas"><img src="images/goBouton.png" alt="boutonGo" id="boutonGo"></a>
+                    <img src="images/pikachu-dance.gif" alt="Pikachu danse" id="pikachuDanse">
                 </div>
             </div>
             <div class="sacha">
@@ -99,58 +99,35 @@
         </section>
 
         <section class="pageDeux">
-            
-            <div class="namePoke">
-                <p id="prenom"></p>
-                <p id="signe"></p>
-                <p id="tonPokeAstro"></p>
-                <p id="pokemonFr"></p>
-                <p id="pokemonEng"></p>
-            </div>
-            
-            <div class="astroResult">
-                <div id="description"></div>
-                <img id="sprite" src="">
-                <div id="pourquoi"></div>
-            </div>
-            
-            
-            <!-- <div class="nomPokemon">
-                <div id="description"></div>
-            </div>
-
-            <div class="spritePokemon">
-                <img id="sprite" src="">
-            </div>
-            
-            <div id="pourquoi"></div> -->
+            <div class="reponse">
+                <div class="reponse1">
+                    <span id="nom"></span>
+                    <br>
+                    <span id="descriptionTitre"></span>
+                    <span id="description"></span>
+                </div>
+                <div class="reponse2">
+                    <span id="pokemonFr"></span>
+                    <span id="pokemonEng"></span>
+                    <img id="sprite" src="">
+                </div>
+                <div class="reponse3">
+                    <span id="pourquoiTitre"></span>
+                    <span id="pourquoi"></span>
+                    <br>
+                    <span id="horoscopeTitre"></span>
+                    <span id="horoscope"></span>
+                </div>
         </section>
-
-         <div>   
-            <h4>Horoscope du jour : </h4>
-            <div id="horoscope"></div>
-            <a href="index.html">Retour à la page principale.</a> <!-- retour en haut de la page -->
+        <br>
+        <div class="boutonReco">
+            <a href="#haut"><img src="images/boutonReco.png" alt="Recommences" id="boutonReco"></a>
+            <img src="images/pikasacha.gif" id="pikasacha">
         </div>
 
     </main>
 
     <footer id="bas">
-        
-        <div class="slidePoke">
-            <div class="slideImg"><img src="images/bulbizar.png" alt=""></div>
-            <div class="slideImg"><img src="images/salameche.png" alt=""></div>
-            <div class="slideImg"><img src="images/carapuce.png" alt=""></div>
-            <div class="slideImg"><img src="images/pikachu.png" alt=""></div>
-            <div class="slideImg"><img src="images/evoli.png" alt=""></div>
-            <div class="slideImg"><img src="images/mélofée.png" alt=""></div>
-            <div class="slideImg"><img src="images/gravalanche.png" alt=""></div>
-            <div class="slideImg"><img src="images/flagados.png" alt=""></div>
-            <div class="slideImg"><img src="images/miaous.png" alt=""></div>
-            <div class="slideImg"><img src="images/mew.png" alt=""></div>
-            <div class="slideImg"><img src="images/" alt=""></div>
-            <div class="slideImg"><img src="images/" alt=""></div>
-        </div>
-       
         <p>2022 - Ce service vous est offert par la team MAJ.</p>
     </footer>
 
