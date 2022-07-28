@@ -6,6 +6,13 @@
        url(fonts/pokemon_pixel_font.ttf)
 }
 
+/* bloquer le scroll */
+html, body { 
+  height: 100%;
+  overflow: hidden
+}
+
+/* Tout le body */
 body {
   font-family: 'Pokemon_classic';
   color: rgb(242, 236, 67);
@@ -20,6 +27,11 @@ header {
   align-items: center;
 }
 
+#logo {
+  width: 60%;
+}
+
+/* Page d'accueil */
 .pageUne {
   margin-top: -80px;
   display: flex;
@@ -29,57 +41,15 @@ header {
   padding: 50px;
 }
 
-/* #bulleO {
-  display: flex;
-  justify-content: center;
-  height: 100px;
-}
-
-#bulleS {
-  display: flex;
-  justify-content: center;
-  height: 100px;
-} */
-
+/* Image & bulle Ondine */
 .ondine {
   position:relative;
   right:50px;
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; */
   width: 25%;
 }
 
 #ondine {
   width: 70%;
-  /* margin-top: -75px; */
-}
-
-
-.sacha {
-  position:relative;
-  left:50px;
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; */
-  width:25%;
-}
-
-#sacha {
-	width:100%;
-  /* margin-top: -45px; */
-}
-
-.carton {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  /* margin-left: 50px;
-  margin-right: 20px; */
-  width: 50%;
 }
 
 .bulleO {
@@ -91,6 +61,17 @@ header {
   width: 60%;
 }
 
+/* Image & bulle Sacha */
+.sacha {
+  position:relative;
+  left:50px;
+  width:25%;
+}
+
+#sacha {
+	width:100%;
+}
+
 .bulleS {
   position:relative;
   left:300px;
@@ -100,7 +81,53 @@ header {
   width: 50%;
 }
 
+/* Formulaire */
+.carton {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
 
+.boutonGo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#boutonGo {
+  width: 120%;
+  margin-top:18px;
+}
+
+button:hover {
+	background-color: rgb(249, 217, 10);
+}
+
+button {
+	display: inline-block;
+  font-family: 'Pokemon_classic';
+  text-align: center;
+	background-color: rgb(14, 50, 233);
+	border-radius: 15px;
+	border: solid rgb(3, 8, 103);
+	text-align: center;
+	font-size: 15px;
+	padding: 5px;
+	margin: 10px;
+	width: 200px;
+  height: 70px;
+  width: 160px;
+}
+
+#boutonGenerer {
+  height: 70px;
+  width: 160px;
+}
+
+/* Page réponses */
 .pageDeux {
   display: flex;
   flex-direction: column;
@@ -136,162 +163,25 @@ header {
   align-items: center;
 }
 
-#description {
-  background-color: aliceblue;
-  margin: 5px;
-  margin-block: 5px;
-  color:rgb(3, 8, 103);
-  font-size: 12px;
+/* à l'intérieur des réponses */
+#pokemonFr {
+  font: bolder;
+  font-family: src=url(fonts/pokemom_solid.ttf);
+  font-size: 200%;
+  color: white;
 }
 
-/* .pageDeux {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-} */
-
-
-  /* .namePoke {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  text-align: center;
-  color:rgb(248, 244, 244)
+#description, #pourquoi, #horoscope {
+  border:solid;
+  border-radius:10px;
+  padding:15px;
+  font-size:80%;
+  background-color: rgb(189,235,248);
+  color:black;
 }
 
-.astroResult {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
-  margin: 20px 0px 0px 20px;
-}
 
-#horoscope {
-  width: 80%;
-  margin-left: 100px;
-  margin-top: 50px;
-} */
-
-.vieuxP {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-
-#pierre {
-  width: 40%;
-  margin-top: -40px;
-}
-
-#bulleP {
-  width: 80%;
-}
-
-.boutonP {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-/* .nomPokemon {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.sprite {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.pourquoi {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 33%;
-} */
-
-/* bloquer le scroll */
-/* html, body { 
-  height: 100%;
-  overflow: hidden
-} */
-
-/* #haut {
-  size: auto;
-	width: 80%;
-	height: auto;
-	text-align: center;
-	margin: auto;
-} */
-
-/*.titre {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}*/
-
-/* section {
-  display: flex;
-  flex-direction: row;
-  text-align: center;
-  align-items: center;
-  margin: 20px;
-} */
-
-/* .titre {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-} */
-
-/* button {
-	display: inline-block;
-  font-family: 'Pokemon_classic';
-  text-align: center;
-	background-color: rgb(14, 50, 233);
-	border-radius: 15px;
-	border: solid rgb(3, 8, 103);
-	text-align: center;
-	font-size: 15px;
-	padding: 5px;
-	margin: 10px;
-	width: 200px;
-} */
-button:hover {
-	background-color: rgb(249, 217, 10);
-}
-
-button {
-	display: inline-block;
-  font-family: 'Pokemon_classic';
-  text-align: center;
-	background-color: rgb(14, 50, 233);
-	border-radius: 15px;
-	border: solid rgb(3, 8, 103);
-	text-align: center;
-	font-size: 15px;
-	padding: 5px;
-	margin: 10px;
-	width: 200px;
-  height: 70px;
-  width: 160px;
-}
-
-#boutonGenerer {
-  height: 70px;
-  width: 160px;
-}
-
+/* Bouton pour recommencer */
 .boutonReco {
   display: flex;
   justify-content: center;
@@ -309,34 +199,57 @@ button {
   background-color: rgb(249, 217, 10);
 }
 
-#pokemonFr {
-  font: bolder;
-  font-family: src=url(fonts/pokemom_solid.ttf);
-  font-size: 200%;
-  color: white;
+#pikasacha {
+  margin-top:-5px;
+  margin-left: 10px;
+  width:8%;
 }
-/* .slider {
-  overflow: hidden;
-} */
 
-/* div.slidePoke {
+/* Page Pierre  */
+
+.vieuxP {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#pierre {
+  width: 30%;
+  margin-top: -40px;
+}
+
+#bulleP {
+  width: 80%;
+}
+
+.boutonP {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#cutePokemon {
+  margin-left: 30px;
+  width:50%;
+}
+
+
+/* Animation pokémons */
+.slidePoke {
   display:flex;
   align-items: center;
   flex-direction: row;
-  width: calc(500px * 4);
-  animation: glisse 15s infinite ease;
-  height: 150px;
-  background-color: salmon;
-  border: black;
-} */
+  /* animation: glisse 15s infinite ease; */
+  animation: glisse 15s infinite;
+  height: 50px;
+}
 
-/* .slideImg {
+.slideImg {
   width: 50%;
   height: 50%;
-  margin: 100px;
-  background-color: yellow;
-} */
-
+}
 
 @keyframes glisse {  /* pack qui va permetre de définir plusieurs niveaux d'animation*/
 
@@ -361,7 +274,7 @@ button {
   }
 }
 
-
-
-
+.footerPierre {
+  margin-top: 80px;
+}
 
