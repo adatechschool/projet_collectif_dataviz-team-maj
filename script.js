@@ -115,23 +115,6 @@ prenomChoose.onchange = () => {
     prenomUser = prenomChoose.value;
 };
 
-//print l'astro
-function getMyAstro() {
-    myAstro = getAstro(myDay, myMonth);
-    const astroOnScreen = `Tu es ${myAstro} !`;
-    document.getElementById("printAstro").innerHTML = astroOnScreen;
-    console.log(myAstro);
-}
-
-//print le poké
-async function getMyPoke() {
-    myPoke = await arrPoke[arrAstro.indexOf(myAstro)];
-    console.log(myPoke);
-    const pokeOnScreen = `Ton PokéAstro est ${myPoke} :)`;
-    document.getElementById("printPoke").innerHTML = pokeOnScreen;
-    console.log(myPoke);
-}
-
 //vérifie qu'il y a une date, si oui, print l'astro et le poké
 async function genererPokeAstro() {
     if (myDay == null || myMonth == null || prenomUser == null) {
@@ -185,6 +168,7 @@ async function fetchSpritePokemon(pokemon) {
         "https://pokeapi.co/api/v2/pokemon/" + pokemon + "/"
     );
     const sprite = await response.json();
+    console.log(sprite);
     return sprite.sprites.other.home.front_default;
 }
 
@@ -200,6 +184,7 @@ async function fetchDescription(pokename) {
             { method: "GET" }
         );
         const json = await response.json();
+        console.log(json)
         const desc =
             json.flavor_text_entries[40].flavor_text +
             "\n" +
