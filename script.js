@@ -87,65 +87,27 @@ const pourquoi = {
         "Pas facile d’être confus et duper comme ça au quotidien, hein, ma petite truite fumée. Tout le monde pense donc que tu es un peu marteau quand en réalité tu es juste une petite créature sans défense et simplement victime de ses pouvoirs mystiques au quotidien. Laisse parler les gens.",
 };
 
-console.log(pourquoi.Taureau);
+//URL de la page result
+const url = new URL(window.location.href);
 
-//les variables qu'on va manipuler
-let myMonth;
-let myDay;
-let prenomUser;
+//on récupère le mois en lettre
+let monthChoose = url.searchParams.get('month');
+//puis on le convertit en chiffre :
+let myMonth = arrMonths.indexOf(monthChoose) + 1;
 
-//récupérer le mois en chiffres
-let monthChoose = document.getElementById("month");
-monthChoose.onchange = () => {
-    myMonthInLetter = monthChoose.value;
-    myMonth = arrMonths.indexOf(myMonthInLetter) + 1;
-    console.log(myMonth);
-};
+//on récupère le jour en chiffre
+let myDay = url.searchParams.get('day');
 
-//récupérer le jour
-let dayChoose = document.getElementById("day");
-dayChoose.onchange = () => {
-    myDay = dayChoose.value;
-    console.log(myDay);
-};
-
-//récupérer le prénom
-let prenomChoose = document.getElementById("prenomUser");
-prenomChoose.onchange = () => {
-    prenomUser = prenomChoose.value;
-};
-
-//print l'astro
-function getMyAstro() {
-    myAstro = getAstro(myDay, myMonth);
-    const astroOnScreen = `Tu es ${myAstro} !`;
-    document.getElementById("printAstro").innerHTML = astroOnScreen;
-    console.log(myAstro);
-}
-
-//print le poké
-async function getMyPoke() {
-    myPoke = await arrPoke[arrAstro.indexOf(myAstro)];
-    console.log(myPoke);
-    const pokeOnScreen = `Ton PokéAstro est ${myPoke} :)`;
-    document.getElementById("printPoke").innerHTML = pokeOnScreen;
-    console.log(myPoke);
-}
+let prenomUser = url.searchParams.get('prenomUser');
 
 //vérifie qu'il y a une date, si oui, print l'astro et le poké
-async function genererPokeAstro() {
+function checkBouton() {
     if (myDay == null || myMonth == null || prenomUser == null) {
         window.open("page.html", target="_self");
-    } else {
-        await buttonClicked();
     }
 }
 
-function checkBouton(){
-    if (myDay == null || myMonth == null || prenomUser == "") {
-        window.open("page.html");
-    }
-}
+buttonClicked();
 
 //fonctions quand on clique sur "Découvres ton PokéAstro"
 async function buttonClicked() {
@@ -185,6 +147,7 @@ async function fetchSpritePokemon(pokemon) {
         "https://pokeapi.co/api/v2/pokemon/" + pokemon + "/"
     );
     const sprite = await response.json();
+    console.log(sprite);
     return sprite.sprites.other.home.front_default;
 }
 
@@ -200,6 +163,7 @@ async function fetchDescription(pokename) {
             { method: "GET" }
         );
         const json = await response.json();
+        console.log(json)
         const desc =
             json.flavor_text_entries[40].flavor_text +
             "\n" +
@@ -270,3 +234,26 @@ function getSigne(d, m) {
 //         }, 5000)
 //     })
 // }
+
+//OLD METHODO DE RECUPERATION DES DONNEES =>
+
+//récupérer le mois en chiffres
+// let monthChoose = document.getElementById("month");
+// monthChoose.onchange = () => {
+//     myMonthInLetter = monthChoose.value;
+//     myMonth = arrMonths.indexOf(myMonthInLetter) + 1;
+//     console.log(myMonth);
+// };
+
+//récupérer le jour
+// let dayChoose = document.getElementById("day");
+// dayChoose.onchange = () => {
+//     myDay = dayChoose.value;
+//     console.log(myDay);
+// };
+
+//récupérer le prénom
+// let prenomChoose = document.getElementById("prenomUser");
+// prenomChoose.onchange = () => {
+//     prenomUser = prenomChoose.value;
+// };
