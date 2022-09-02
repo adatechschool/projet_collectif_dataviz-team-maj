@@ -25,113 +25,93 @@
             <div class="carton">
                 <div class="bulleO"><img src="images/bulle ondine.gif" id="bulleO"></div>
                 <div class="bulleS"><img src="images/bulle sacha.gif" id="bulleS"></div>
-                <div class="prenom">
-                    <label for="prenomUser">Ton prénom :</label>
-                    <input type="text" id="prenomUser" name="prenomUser" required>
-                </div>
-                <div class="date">
-                    <label for="day">Ton jour de naissance :</label>
-                    <select id="day" name="day" value="1">
-                        <option selected>1</option>
-                        <option selected>2</option>
-                        <option selected>3</option>
-                        <option selected>4</option>
-                        <option selected>5</option>
-                        <option selected>6</option>
-                        <option selected>7</option>
-                        <option selected>8</option>
-                        <option selected>9</option>
-                        <option selected>10</option>
-                        <option selected>11</option>
-                        <option selected>12</option>
-                        <option selected>13</option>
-                        <option selected>14</option>
-                        <option selected>15</option>
-                        <option selected>16</option>
-                        <option selected>17</option>
-                        <option selected>18</option>
-                        <option selected>19</option>
-                        <option selected>20</option>
-                        <option selected>21</option>
-                        <option selected>22</option>
-                        <option selected>23</option>
-                        <option selected>24</option>
-                        <option selected>25</option>
-                        <option selected>26</option>
-                        <option selected>27</option>
-                        <option selected>28</option>
-                        <option selected>29</option>
-                        <option selected>30</option>
-                        <option selected>31</option>
-                        <option selected>--Choisis--</option>
-                    </select>
-                    <br>
-                    <label for="month">Ton mois de naissance :</label>
+                <form action="result.html" method="GET">
+                    <div class="prenom">
+                        <label for="prenomUser">Ton prénom :</label>
+                        <input type="text" id="prenomUser" name="prenomUser" required>
+                    </div>
+                    <div class="date">
+                        <label for="day">Ton jour de naissance :</label>
+                        <select id="day" name="day" value="1">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                            <option>10</option>
+                            <option>11</option>
+                            <option>12</option>
+                            <option>13</option>
+                            <option>14</option>
+                            <option>15</option>
+                            <option>16</option>
+                            <option>17</option>
+                            <option>18</option>
+                            <option>19</option>
+                            <option>20</option>
+                            <option>21</option>
+                            <option>22</option>
+                            <option>23</option>
+                            <option>24</option>
+                            <option>25</option>
+                            <option>26</option>
+                            <option>27</option>
+                            <option>28</option>
+                            <option>29</option>
+                            <option>30</option>
+                            <option>31</option>
+                            <option selected>--Choisis--</option>
+                        </select>
+                        <br>
+                        <label for="month">Ton mois de naissance :</label>
+                        <select id="month" name="month">
+                            <option>Janvier</option>
+                            <option>Février</option>
+                            <option>Mars</option>
+                            <option>Avril</option>
+                            <option>Mai</option>
+                            <option>Juin</option>
+                            <option>Juillet</option>
+                            <option>Août</option>
+                            <option>Septembre</option>
+                            <option>Octobre</option>
+                            <option>Novembre</option>
+                            <option>Décembre</option>
+                            <option selected>--Choisis--</option>
+                        </select>
+                    <!-- données à faire passer à l'aide d'inputs -->
+                    <!-- <label for="prenom">Ton prénom :</label>
+                    <input name="prenom">
+                    <label for="nom">Ton nom :</label>
+                    <input name="nom"> -->
+                    <button type="submit" onclick="checkBouton()"><img src="images/bouton.png" alt="Génères ton PokéAstro" id="boutonGenerer"></button>
+                </form>
 
-                    <select id="month" name="month">
-                        <option selected>Janvier</option>
-                        <option selected>Février</option>
-                        <option selected>Mars</option>
-                        <option selected>Avril</option>
-                        <option selected>Mai</option>
-                        <option selected>Juin</option>
-                        <option selected>Juillet</option>
-                        <option selected>Août</option>
-                        <option selected>Septembre</option>
-                        <option selected>Octobre</option>
-                        <option selected>Novembre</option>
-                        <option selected>Décembre</option>
-                        <option selected>--Choisis--</option>
-                    </select>
                 </div>
-                <div class="boutonGenerer">
+                <!-- <div class="boutonGenerer">
                     <button onclick="genererPokeAstro()"><img src="images/bouton.png" alt="Génères ton PokéAstro" id="boutonGenerer"></button>
                 </div>
                 <div class="boutonGo">
                     <a onclick="checkBouton()" href="#bas"><img src="images/goBouton.png" alt="boutonGo" id="boutonGo"></a>
                     <img src="images/pikachu-dance.gif" alt="Pikachu danse" id="pikachuDanse">
-                </div>
+                </div> -->
             </div>
             <div class="sacha">
                 <img src="images/sacha.png" alt="sacha" id="sacha">
             </div>
 
         </section>
-
-        <section class="pageDeux">
-            <div class="reponse">
-                <div class="reponse1">
-                    <span id="nom"></span>
-                    <br>
-                    <span id="descriptionTitre"></span>
-                    <span id="description"></span>
-                </div>
-                <div class="reponse2">
-                    <span id="pokemonFr"></span>
-                    <span id="pokemonEng"></span>
-                    <img id="sprite" src="">
-                </div>
-                <div class="reponse3">
-                    <span id="pourquoiTitre"></span>
-                    <span id="pourquoi"></span>
-                    <br>
-                    <span id="horoscopeTitre"></span>
-                    <span id="horoscope"></span>
-                </div>
-        </section>
-        <br>
-        <div class="boutonReco">
-            <a href="#haut"><img src="images/boutonReco.png" alt="Recommences" id="boutonReco"></a>
-            <img src="images/pikasacha.gif" id="pikasacha">
-        </div>
-
     </main>
 
     <footer id="bas">
         <p>2022 - Ce service vous est offert par la team MAJ.</p>
     </footer>
-
-        <script src="script.js"></script>
+    <script src="script.js"></script>
+        <!-- <script src="script.js"></script> -->
 </body>
 
 </html>
