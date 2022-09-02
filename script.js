@@ -135,15 +135,15 @@ async function getMyPoke() {
 //vérifie qu'il y a une date, si oui, print l'astro et le poké
 async function genererPokeAstro() {
     if (myDay == null || myMonth == null || prenomUser == null) {
-        window.open("/page.html");
+        window.open("page.html", target="_self");
     } else {
         await buttonClicked();
     }
 }
 
 function checkBouton(){
-    if (myDay == null || myMonth == null || prenomUser == null) {
-        window.open("/page.html");
+    if (myDay == null || myMonth == null || prenomUser == "") {
+        window.open("page.html");
     }
 }
 
@@ -165,16 +165,17 @@ async function buttonClicked() {
     console.log(horoscope);
     console.log(nomPokemon);
 
-    document.getElementById("prenom").innerHTML = `${prenomUser}, `;
-    document.getElementById("signe").innerHTML = `tu es ${signe}, `;
-    document.getElementById("tonPokeAstro").innerHTML = "ton PokéAstro est... ";
-    document.getElementById("pokemonFr").innerHTML = `${nomPokemon} !`;
+    document.getElementById("nom").innerHTML = `${prenomUser}, tu es ${signe},<br/>ton PokéAstro est...`
+    document.getElementById("pokemonFr").innerHTML = `<br/>${nomPokemon} !<br/>`;
     document.getElementById("pokemonEng").innerHTML = (
         pokemon.charAt(0).toUpperCase() + pokemon.slice(1)
     ).italics();
     document.getElementById("sprite").src = sprite;
+    document.getElementById("horoscopeTitre").innerHTML = 'Ton horoscope du jour :<br/>';
     document.getElementById("horoscope").innerHTML = horoscope;
+    document.getElementById("descriptionTitre").innerHTML = 'Description :<br/>';
     document.getElementById("description").innerHTML = description;
+    document.getElementById("pourquoiTitre").innerHTML = 'Pourquoi c\'est ton PokéAstro :<br/>';
     document.getElementById("pourquoi").innerHTML = pourquoiPoke;
 }
 
@@ -202,9 +203,7 @@ async function fetchDescription(pokename) {
         const desc =
             json.flavor_text_entries[40].flavor_text +
             "\n" +
-            json.flavor_text_entries[57].flavor_text +
-            "\n" +
-            json.flavor_text_entries[67].flavor_text;
+            json.flavor_text_entries[57].flavor_text;
         return desc;
     }
 }
