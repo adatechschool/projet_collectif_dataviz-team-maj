@@ -18,19 +18,19 @@
     </header>
 
     <main>
-        <section class="pageUne">
-            <div class="ondine">
-                <img src="images/ondine.png" alt="ondine" id="ondine">
-            </div>
-            <div class="carton">
-                <div class="bulleO"><img src="images/bulle ondine.gif" id="bulleO"></div>
-                <div class="bulleS"><img src="images/bulle sacha.gif" id="bulleS"></div>
+        <div class="ondine">
+            <img src="images/ondine.png" alt="ondine" id="ondine" class="image">
+        </div>
+        <div class="centre">
+            <div class="bulleOndine"><img src="images/bulle ondine.gif" id="bulleOndine" class="bulle"></div>
+            <div class="bulleSacha"><img src="images/bulle sacha.gif" id="bulleSacha" class="bulle"></div>
+            <div class="formulaire">
                 <form action="result.html" method="GET">
                     <div class="prenom">
                         <label for="prenomUser">Ton prénom :</label>
                         <input type="text" id="prenomUser" name="prenomUser" required>
                     </div>
-                    <div class="date">
+                    <div class="jour">
                         <label for="day">Ton jour de naissance :</label>
                         <select id="day" name="day" value="1">
                             <option>1</option>
@@ -66,7 +66,8 @@
                             <option>31</option>
                             <option selected>--Choisis--</option>
                         </select>
-                        <br>
+                    </div>
+                    <div class="mois">
                         <label for="month">Ton mois de naissance :</label>
                         <select id="month" name="month">
                             <option>Janvier</option>
@@ -83,35 +84,25 @@
                             <option>Décembre</option>
                             <option selected>--Choisis--</option>
                         </select>
-                    <!-- données à faire passer à l'aide d'inputs -->
-                    <!-- <label for="prenom">Ton prénom :</label>
-                    <input name="prenom">
-                    <label for="nom">Ton nom :</label>
-                    <input name="nom"> -->
-                    <button type="submit" onclick="checkBouton()"><img src="images/bouton.png" alt="Génères ton PokéAstro" id="boutonGenerer"></button>
+                    </div>
+                    <button type="submit" onclick="checkBouton()">
+                        <img src="images/bouton.png" alt="Génères un PokéAstro" id="boutonGenerer">
+                        <img src="images/boutonOver.png" class="img-top" alt="Génères un PokéAstro" id="boutonGenererHover">
+                        <!-- <img src="images/bouton.png" alt="Génères ton PokéAstro" id="boutonGenerer"> -->
+                    </button>
                 </form>
-
-                </div>
-                <!-- <div class="boutonGenerer">
-                    <button onclick="genererPokeAstro()"><img src="images/bouton.png" alt="Génères ton PokéAstro" id="boutonGenerer"></button>
-                </div>
-                <div class="boutonGo">
-                    <a onclick="checkBouton()" href="#bas"><img src="images/goBouton.png" alt="boutonGo" id="boutonGo"></a>
-                    <img src="images/pikachu-dance.gif" alt="Pikachu danse" id="pikachuDanse">
-                </div> -->
             </div>
-            <div class="sacha">
-                <img src="images/sacha.png" alt="sacha" id="sacha">
-            </div>
+        </div>
+        <div class="sacha">
+            <img src="images/sacha.png" alt="sacha" id="sacha" class="image">
+        </div>
 
-        </section>
     </main>
 
     <footer id="bas">
         <p>2022 - Ce service vous est offert par la team MAJ.</p>
     </footer>
     <script src="script.js"></script>
-        <!-- <script src="script.js"></script> -->
 </body>
 
 </html>
